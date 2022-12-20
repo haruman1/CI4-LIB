@@ -4,12 +4,15 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 
+use CodeIgniter\Files\File;
+
 class Admin extends BaseController
 {
     public function __construct()
     {
         $this->db = \Config\Database::connect();
         $this->adminModel = new \App\Models\AdminModel();
+        $this->adminBookModel = new \App\Models\AdminBookModel();
         $this->builder = $this->db->table('user');
         $this->validation = \Config\Services::validation();
         $this->session = \Config\Services::session();
@@ -277,6 +280,228 @@ class Admin extends BaseController
             } else {
                 $this->session->setTempdata('pesanGagal', 'Gagal Menghapus data', 10);
                 return redirect()->to('/admin/anggota');
+            }
+        }
+    }
+    public function tambahBuku()
+    {
+        if ($this->session->get('role') == 2 || $this->session->get('role') == NULL) {
+            return redirect()->to('/');
+        } else {
+            if (!$this->validate(
+                [
+                    'id_buku' => [
+                        'rules' => 'required|min_length[3]|max_length[10]',
+                        'errors' => [
+                            'required' => 'ID Buku wajib di isi',
+                            'min_length[3]' => 'ID terlalu pendek',
+                            'max_length[10]' => 'ID terlalu panjang',
+                        ],
+                    ],
+                    'judulbuku' => [
+                        'rules' => 'required|min_length[3]',
+                        'errors' => [
+                            'required' => 'Judul Buku wajib di isi',
+                            'min_length[3]' => 'Judul Buku terlalu pendek',
+                        ],
+                    ],
+
+                    'kategori' => [
+                        'rules' => 'required|min_length[3]|max_length[20]',
+                        'errors' => [
+                            'required' => 'Kategori wajib di isi',
+                            'min_length[3]' => 'Kategori terlalu pendek',
+                            'max_length[20]' => 'Kategori terlalu panjang',
+
+                        ],
+                    ],
+                    'author' => [
+                        'rules' => 'required|min_length[3]|max_length[20]',
+                        'errors' => [
+                            'required' => 'Author wajib di isi',
+                            'min_length[3]' => 'Author terlalu pendek',
+                            'max_length[20]' => 'Author terlalu panjang',
+
+                        ],
+                    ],
+                    'stok' => [
+                        'rules' => 'required|min_length[3]|max_length[20]',
+                        'errors' => [
+                            'required' => 'Stok wajib di isi',
+                            'min_length[3]' => 'Stok terlalu pendek',
+                            'max_length[20]' => 'Stok terlalu panjang',
+
+                        ],
+                    ],
+                    'cover_buku' => [
+                        'rules' => 'uploaded[cover_buku]|is_image[cover_buku]|mime_in[cover_buku,image/jpg,image/jpeg,image/gif,image/png,image/webp]',
+                        'errors' => [
+                            'uploaded' => 'Harus Ada File yang diupload',
+                            'mime_in' => 'File Extention Harus Berupa jpg,jpeg,gif,png'
+                            
+                        ]
+                        
+                    ],
+                    'file_buku' => [
+                        'rules' => 'uploaded[file_buku]'
+                        . '|mime_in[file_buku,pdf]',
+                        
+                    ],
+                ]
+
+            )) {
+                $this->session->setTempdata('Iderror', $this->validation->getError('id_buku'), 10);
+                $this->session->setTempdata('Judulerror', $this->validation->getError('judulbuku'), 10);
+                $this->session->setTempdata('Kategorierror', $this->validation->getError('kategoribuku'), 10);
+                $this->session->setTempdata('Authorerror', $this->validation->getError('author'), 10);
+                $this->session->setTempdata('Stokerror', $this->validation->getError('stok'), 10);
+                $this->session->setTempdata('Covererror', $this->validation->getError('cover_buku'), 10);
+                $this->session->setTempdata('Fileerror', $this->validation->getError('file_buku'), 10);
+
+                return view('/template/admin/header')
+                    . view('admin/kelolabuku', [
+                        'validation' => $this->validation,
+                        'session' => $this->session,
+                        'title' => 'Register' . $_ENV['app.name'],
+                        'db' => $this->db,
+                    ]);
+            } else {
+                $this->adminBookModel->save([
+                    'id' => $this->request->getVar('id_buku'),
+                    'judul' => $this->request->getVar('judulbuku'),
+                    'kategori' => $this->request->getVar('kategoribuku'),
+                    'author' => $this->request->getVar('author'),
+                    'stok' => $this->request->getVar('stok'),
+                ]);
+
+                
+                $img = $this->request->getFile('cover_buku');
+                $file = $this->request->getFile('file_buku');
+
+                if (! $img->hasMoved() && $file->hasMoved()) {
+                    $imagepath = WRITEPATH . 'uploads/' . $img->store();
+                    $filepath = WRITEPATH . 'uploads/' . $file->store();
+        
+                    $data = ['uploaded_imageinfo' => new File($imagepath)];
+        
+                    $this->session->setTempdata('pesanBerhasil', 'Berhasil Menambahkan Buku Baru', 10);
+                    return view('/admin/buku', $data);
+                }
+                $data = ['errors' => 'The file has already been moved.'];
+        
+
+                return redirect()->to('/admin/buku');
+            }
+        }
+    }
+    public function editBuku()
+    {
+        if ($this->session->get('role') == 2 || $this->session->get('role') == NULL) {
+            return redirect()->to('/');
+        } else {
+            if (!$this->validate(
+                [
+                    'id_buku' => [
+                        'rules' => 'required|min_length[3]|is_unique[user.email.id,{id}]',
+                        'errors' => [
+                            'required' => 'Email wajib di isi',
+                            'min_length[3]' => 'Email terlalu pendek',
+                            'is_unique' => 'Email sudah ada,silahkan gunakan yang lain',
+                        ],
+                    ],
+                    'judulbuku' => [
+                        'rules' => 'required|min_length[3]',
+                        'errors' => [
+                            'required' => 'Judul Buku wajib di isi',
+                            'min_length[3]' => 'Judul Buku terlalu pendek',
+                        ],
+                    ],
+
+                    'kategori' => [
+                        'rules' => 'required|min_length[3]|max_length[20]',
+                        'errors' => [
+                            'required' => 'Kategori wajib di isi',
+                            'min_length[3]' => 'Kategori terlalu pendek',
+                            'max_length[20]' => 'Kategori terlalu panjang',
+
+                        ],
+                    ],
+                    'author' => [
+                        'rules' => 'required|min_length[3]|max_length[20]',
+                        'errors' => [
+                            'required' => 'Author wajib di isi',
+                            'min_length[3]' => 'Author terlalu pendek',
+                            'max_length[20]' => 'Author terlalu panjang',
+
+                        ],
+                    ],
+                    'stok' => [
+                        'rules' => 'required|min_length[3]|max_length[20]',
+                        'errors' => [
+                            'required' => 'Stok wajib di isi',
+                            'min_length[3]' => 'Stok terlalu pendek',
+                            'max_length[20]' => 'Stok terlalu panjang',
+
+                        ],
+                    ],
+                    'cover_buku' => [
+                        'rules' => 'uploaded[cover_buku]|is_image[cover_buku]|mime_in[cover_buku,image/jpg,image/jpeg,image/gif,image/png,image/webp]',
+                        'errors' => [
+                            'uploaded' => 'Harus Ada File yang diupload',
+                            'mime_in' => 'File Extention Harus Berupa jpg,jpeg,gif,png'
+                            
+                        ]
+                        
+                    ],
+                    'file_buku' => [
+                        'rules' => 'uploaded[file_buku]'
+                        . '|mime_in[file_buku,pdf]',
+                        
+                    ],
+                ]
+
+            )) {
+                $this->session->setTempdata('Iderror', $this->validation->getError('id_buku'), 10);
+                $this->session->setTempdata('Judulerror', $this->validation->getError('judulbuku'), 10);
+                $this->session->setTempdata('Kategorierror', $this->validation->getError('kategoribuku'), 10);
+                $this->session->setTempdata('Authorerror', $this->validation->getError('author'), 10);
+                $this->session->setTempdata('Stokerror', $this->validation->getError('stok'), 10);
+                $this->session->setTempdata('Covererror', $this->validation->getError('cover_buku'), 10);
+                $this->session->setTempdata('Fileerror', $this->validation->getError('file_buku'), 10);
+
+                return view('/template/admin/header')
+                    . view('admin/kelolabuku', [
+                        'validation' => $this->validation,
+                        'session' => $this->session,
+                        'title' => 'Register' . $_ENV['app.name'],
+                        'db' => $this->db,
+                    ]);
+            } else {
+                $this->adminBookModel->save([
+                    'id' => $this->request->getVar('id_buku'),
+                    'judul' => $this->request->getVar('judulbuku'),
+                    'kategori' => $this->request->getVar('kategoribuku'),
+                    'author' => $this->request->getVar('author'),
+                    'stok' => $this->request->getVar('stok'),
+                ]);
+
+                
+                $img = $this->request->getFile('cover_buku');
+                $file = $this->request->getFile('file_buku');
+
+                if (! $img->hasMoved() && $file->hasMoved()) {
+                    $imagepath = WRITEPATH . 'uploads/' . $img->store();
+                    $filepath = WRITEPATH . 'uploads/' . $file->store();
+        
+                    $data = ['uploaded_imageinfo' => new File($imagepath)];
+        
+                    $this->session->setTempdata('pesanBerhasil', 'Berhasil Menambahkan Buku Baru', 10);
+                    return view('/admin/buku', $data);
+                }
+                $data = ['errors' => 'The file has already been moved.'];
+        
+
+                return redirect()->to('/admin/buku');
             }
         }
     }

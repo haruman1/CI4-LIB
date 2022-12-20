@@ -246,54 +246,48 @@ if (isset($_SESSION['nama'])) {
                     </button>
                 </div>
                 <div class="modal-body">
-                <form class="user" method="POST" action="book/add">
+                <?php if (!empty(session()->getFlashdata('error'))) : ?>
+                    <div class="alert alert-danger" role="alert">
+                        <h4>Periksa Entrian Form</h4>
+                        </hr />
+                        <?php echo session()->getFlashdata('error'); ?>
+                    </div>
+                <?php endif; ?>
+                <form class="user" method="POST" action="<?php echo base_url('admin/') ?>/buku/save" enctype="multipart/form-data">
+                <?= csrf_field(); ?>
                                 <div class="form-group">
-                                <input type="text" class="form-control form-control-user" id="add_idbuku"
+                                <input type="text" class="form-control form-control-user" id="id_buku"
                                             placeholder="ID Buku" name="id_buku" required>
                                 </div>
                                 <div class="form-group">
-                                <input type="text" class="form-control form-control-user" name="judulbuku" id="add_judulbuku"
+                                <input type="text" class="form-control form-control-user" name="judulbuku" id="judulbuku"
                                             placeholder="Judul Buku" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" id="add_kategori"
+                                    <input type="text" class="form-control form-control-user" id="kategoribuku"
                                         placeholder="Kategori" name="kategoribuku" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" id="add_author"
+                                    <input type="text" class="form-control form-control-user" id="author"
                                         placeholder="Author" name="author" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" id="add_stok"
+                                    <input type="text" class="form-control form-control-user" id="stok"
                                         placeholder="Stok" name="stok" required>
                                 </div>
                                 <div class="file-drop-area">
                                 <label for="cover_buku" id="labelupload">Cover Buku</label>
-                                <input
-                                type="hidden"
-                                role="uploadcare-uploader"
-                                data-public-key="10955e4554b0247de269"
-                                data-tabs="file url gdrive"
-                                name="cover_buku"
-                                id="cover_buku"
-                                />
+                                <input class="form-control" type="file" id="cover_buku" name="cover_buku">
                                 <p id="help-block">
 								Format file .jpg</p>
                                 </div>
                                 <div class="file-drop-area">
                                 <label for="file_buku" id="labelupload">File Buku</label>
-                                <input
-                                type="hidden"
-                                role="uploadcare-uploader"
-                                data-public-key="10955e4554b0247de269"
-                                data-tabs="file url gdrive"
-                                name="file_buku"
-                                id="file_buku"
-                                />
+                                <input class="form-control" type="file" id="file_buku" name="file_buku">
                                 <p id="help-block">
 								Format file .Pdf</p>
                                 </div>
-                                <input type="submit" class="btn btn-primary btn-user btn-block" name="Simpan" value="Simpan">
+                                <input type="submit" class="btn btn-primary btn-user btn-block" value="Upload">
                                 </input>
                             </form>
                 </div>
@@ -316,7 +310,7 @@ if (isset($_SESSION['nama'])) {
                     </button>
                 </div>
                 <div class="modal-body">
-                <form class="user" method="POST" action="book/edit">
+                <form class="user" method="POST" action="<?php echo base_url('admin/') ?> /buku/edit">
                                 <div class="form-group">
                                 <input type="text" class="form-control form-control-user" id="edit_idbuku"
                                             placeholder="ID Buku" name="id_buku" value="" readonly required>
@@ -339,27 +333,13 @@ if (isset($_SESSION['nama'])) {
                                 </div>
                                 <div class="file-drop-area">
                                 <label for="cover_buku" id="labelupload">Cover Buku</label>
-                                <input
-                                type="hidden"
-                                role="uploadcare-uploader"
-                                data-public-key="10955e4554b0247de269"
-                                data-tabs="file url gdrive"
-                                name="cover_buku"
-                                id="cover_buku"
-                                />
+                                <input class="form-control" type="file" id="cover_buku" name="cover_buku">
                                 <p id="help-block">
 								Format file .jpg</p>
                                 </div>
                                 <div class="file-drop-area">
                                 <label for="file_buku" id="labelupload">File Buku</label>
-                                <input
-                                type="hidden"
-                                role="uploadcare-uploader"
-                                data-public-key="10955e4554b0247de269"
-                                data-tabs="file url gdrive"
-                                name="file_buku"
-                                id="file_buku"
-                                />
+                                <input class="form-control" type="file" id="file_buku" name="file_buku">
                                 <p id="help-block">
 								Format file .Pdf</p>
                                 </div>
