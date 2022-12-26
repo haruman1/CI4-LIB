@@ -13,11 +13,11 @@
     ?>
         <div class="col-lg-2 px-3 py-3 my-lg-2 bg-white position-relative">
             <?php
-            $query = $db->query("SELECT cover_buku FROM hlmnbuku JOIN mybook ON hlmnbuku.id_buku = mybook.id_buku WHERE mybook.id_buku = '$data[id_buku]' ");
-            while ($query->getResultArray()) {
+            $query = $db->query("SELECT cover_buku, hlmnbuku.judulbuku FROM hlmnbuku JOIN mybook ON hlmnbuku.id_buku = mybook.id_buku WHERE mybook.id_buku = '".$data['id_buku']."'");
+            foreach ($query->getResultArray() as $row) {
             ?>
 
-                <img class="card-img mb-2" src="<?php echo base_url('/') ?>/asset/img/buku/<?= $row['cover_buku'] ?>" alt="<?= $data['judulbuku'] ?>" />
+                <img class="card-img mb-2" src="<?php echo base_url('/') ?>/asset/img/buku/<?= $row['cover_buku'] ?>" alt="<?= $row['judulbuku'] ?>" />
                 <!--/.bg-holder-->
         </div>
         <div class="col-lg-4 px-5 py-6 my-lg-2 ml-2 bg-white d-flex align-items-center">
@@ -47,9 +47,9 @@
             </thead>
             <tbody>
                 <?php
-                $sql = $db->query("SELECT bukutersedia.id_buku, bukutersedia.judulbuku, transaksibuku.tanggal_peminjaman,  transaksibuku.tanggal_pengembalian FROM user  INNER JOIN mybook ON  user.id_user = mybook.id_user INNER JOIN transaksibuku ON transaksibuku.id_user = user.id_user INNER JOIN bukutersedia ON bukutersedia.id_buku = mybook.id_buku WHERE user.id_user = '$session->getGet(id_user)'");
+                $listbuku = $db->query("SELECT bukutersedia.id_buku, bukutersedia.judulbuku, transaksibuku.tanggal_peminjaman,  transaksibuku.tanggal_pengembalian, mybook.filebuku FROM user  INNER JOIN mybook ON  user.id_user = mybook.id_user INNER JOIN transaksibuku ON transaksibuku.id_user = user.id_user INNER JOIN bukutersedia ON bukutersedia.id_buku = mybook.id_buku WHERE user.id_user = '".$session->get('id_user')."'");
 
-                foreach ($sql->getResultArray() as $data) {
+                foreach ($listbuku->getResultArray() as $data) {
 
                     echo "<tr>";
                     echo "<th>" . $data['id_buku'] . "</th>";
