@@ -62,12 +62,10 @@ if (null !== $request->getGet('submit-search')) {
         ?>
             <div class="col-lg-12 px-5 py-6 my-lg-2 ml-2 bg-white d-flex align-items-center">
                 <div data-zanim-timeline="{}" data-zanim-trigger="scroll">
-                    <h5 data-zanim-xs='{"delay":0}'><?php echo $_GET['submit-search'] ?> Tidak ditemukan hasil pencarian</h5>
+                    <h5 data-zanim-xs='{"delay":0}'><?php echo $request->getGet('submit-search') ?> Tidak ditemukan hasil pencarian</h5>
                 </div>
             </div>
     <?php }
-    } else {
-        $file_penting->add_with_swal('warning', 'Silahkan isi kolom pencarian terlebih dahulu!', 'error', '');
     } ?>
 </div>
 </div><!-- end of .container-->

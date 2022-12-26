@@ -7,14 +7,14 @@ use CodeIgniter\Model;
 class CategoryModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'categories';
+    protected $table            = 'transaksibuku';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $insertID         = 0;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = ['id_buku', 'id_user', 'judulbuku', 'tanggal_peminjaman', 'tanggal_pengembalian', 'file_buku'];
 
     // Dates
     protected $useTimestamps = false;

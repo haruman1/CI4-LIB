@@ -1,0 +1,1442 @@
+CRITICAL - 2022-12-20 00:17:34 --> Undefined variable $session
+in APPPATH\Views\template\awal\footer.php on line 52.
+ 1 APPPATH\Views\template\awal\footer.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'APPPATH\\Views\\template\\awal\\footer.php', 52)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\template\\awal\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/template/awal/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(41): view('/template/awal/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->tentangkita()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:21:50 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'https://1598871281115744702.owasp.org'%' OR textbuku LIKE '%5;URL='https://15...' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:21:50 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 00:23:24 --> Undefined variable $session
+in APPPATH\Views\template\awal\footer.php on line 52.
+ 1 APPPATH\Views\template\awal\footer.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'APPPATH\\Views\\template\\awal\\footer.php', 52)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\template\\awal\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/template/awal/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(41): view('/template/awal/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->tentangkita()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:25:58 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''%' OR kategoribuku LIKE '%ZAP'%' OR author LIKE '%ZAP'%' ORDER BY judulbuku ASC' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:25:58 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:26:03 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(%' OR textbuku LIKE '%'(%' OR kategoribuku LIKE '%'(%' OR author LIKE '%'(%'...' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:26:03 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:26:04 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(%' OR textbuku LIKE '%ZAP'(%' OR kategoribuku LIKE '%ZAP'(%' OR author LIKE ...' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:26:04 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 00:28:16 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2022-12-20 00:28:57 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SYSTEM_COLUMNS' and COLUMN_NAME = 'TABLE_NAME' -- %' OR textbuku LIKE '%; sel...' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:28:57 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:28:58 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'select "java.lang.Thread.sleep"(15000) from INFORMATION_SCHEMA.SYSTEM_COLUMNS...' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:28:58 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:28:59 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SYSTEM_COLUMNS' and COLUMN_NAME = 'TABLE_NAME' -- %' OR textbuku LIKE '%"; se...' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:28:59 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:29:00 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SYSTEM_COLUMNS' and COLUMN_NAME = 'TABLE_NAME' -- %' OR textbuku LIKE '%); se...' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:29:00 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:29:41 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '10.0.0.1') from dual union SELECT  UTL_INADDR.get_host_name('10.0.0.2') from ...' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:29:41 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:29:42 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '10.0.0.1') from dual union SELECT  UTL_INADDR.get_host_name('10.0.0.2') from ...' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:29:42 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:29:43 --> mysqli_sql_exception: execute command denied to user 'stylecod_haruman'@'%' for routine 'UTL_INADDR.get_host_name' in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:29:43 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:29:44 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '10.0.0.1') from dual union SELECT  UTL_INADDR.get_host_name('10.0.0.2') from ...' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:29:44 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:29:46 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '10.0.0.1') from dual union SELECT  UTL_INADDR.get_host_name('10.0.0.2') from ...' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:29:46 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:30:28 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'case when cast(pg_sleep(15) as varchar) > '' then 0 else 1 end -- %' OR textb...' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:30:28 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:32:37 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(/* */oNcliCk=alert(5397) )//%0D%0A%0d%0a//</stYle/</titLe/</teXtarEa/</scRip...' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:32:37 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 00:32:43 --> Undefined variable $session
+in APPPATH\Views\template\awal\footer.php on line 52.
+ 1 APPPATH\Views\template\awal\footer.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'APPPATH\\Views\\template\\awal\\footer.php', 52)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\template\\awal\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/template/awal/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(41): view('/template/awal/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->tentangkita()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 00:32:52 --> Undefined variable $session
+in APPPATH\Views\template\awal\footer.php on line 52.
+ 1 APPPATH\Views\template\awal\footer.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'APPPATH\\Views\\template\\awal\\footer.php', 52)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\template\\awal\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/template/awal/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(41): view('/template/awal/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->tentangkita()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:33:15 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(/* */oNcliCk=alert(5397) )//%0D%0A%0d%0a//</stYle/</titLe/</teX#javascript:a...' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:33:15 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:34:01 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(/* */oNcliCk=alert(5397) )//%0D%0A%0d%0a//</stYle/</titLe/</teXtarEa/</scRip...' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:34:01 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:34:58 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '0:0:15' -- %' OR textbuku LIKE '%ZAP WAITFOR DELAY '0:0:15' -- %' OR kategori...' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:34:58 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:34:59 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WAITFOR DELAY '0:0:15' -- %' OR textbuku LIKE '%ZAP' WAITFOR DELAY '0:0:15' -...' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:34:59 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:35:00 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '0:0:15' -- %' OR textbuku LIKE '%ZAP" WAITFOR DELAY '0:0:15' -- %' OR kategor...' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:35:00 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:35:01 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '0:0:15' -- %' OR textbuku LIKE '%ZAP) WAITFOR DELAY '0:0:15' -- %' OR kategor...' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:35:01 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:35:02 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WAITFOR DELAY '0:0:15' -- %' OR textbuku LIKE '%ZAP) ' WAITFOR DELAY '0:0:15'...' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:35:02 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:36:02 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'print(chr(122).chr(97).chr(112).chr(95).chr(116).chr(111).chr(107).chr(101).c...' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:36:02 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:39:49 --> mysqli_sql_exception: Unknown column 'cat' in 'where clause' in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:39:49 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:39:50 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'cat /etc/passwd;'%' OR textbuku LIKE '%ZAP';cat /etc/passwd;'%' OR kategoribu...' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:39:50 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:39:56 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '15&'%' OR textbuku LIKE '%ZAP'&sleep 15&'%' OR kategoribuku LIKE '%ZAP'&sleep...' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:39:56 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:39:56 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'sleep 15;'%' OR textbuku LIKE '%ZAP';sleep 15;'%' OR kategoribuku LIKE '%ZAP'...' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:39:56 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:40:03 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\win.ini&'%' OR textbuku LIKE '%ZAP'&type %SYSTEMROOT%\win.ini&'%' OR kategor...' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:40:03 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:40:04 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\win.ini%' OR textbuku LIKE '%ZAP'|type %SYSTEMROOT%\win.ini%' OR kategoribuk...' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:40:04 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:40:13 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '15&'%' OR textbuku LIKE '%ZAP'&timeout /T 15&'%' OR kategoribuku LIKE '%ZAP'&...' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:40:13 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:40:14 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '15%' OR textbuku LIKE '%ZAP'|timeout /T 15%' OR kategoribuku LIKE '%ZAP'|time...' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:40:14 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:40:16 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'get-help%' OR textbuku LIKE '%ZAP';get-help%' OR kategoribuku LIKE '%ZAP';get...' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:40:16 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:40:18 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'start-sleep -s 15%' OR textbuku LIKE '%ZAP';start-sleep -s 15%' OR kategoribu...' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:40:18 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 00:40:36 --> Undefined variable $session
+in APPPATH\Views\template\awal\footer.php on line 52.
+ 1 APPPATH\Views\template\awal\footer.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'APPPATH\\Views\\template\\awal\\footer.php', 52)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\template\\awal\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/template/awal/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(41): view('/template/awal/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->tentangkita()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:43:59 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'xsl:vendor')"/>%' OR textbuku LIKE '%<xsl:value-of select="system-property('x...' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:43:59 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:44:00 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'xsl:vendor')/>%' OR textbuku LIKE '%system-property('xsl:vendor')/>%' OR kate...' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:44:00 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:44:01 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'xsl:vendor')"/><!--%' OR textbuku LIKE '%"/><xsl:value-of select="system-prop...' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:44:01 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:44:02 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'xsl:vendor')"/><!--%' OR textbuku LIKE '%<xsl:value-of select="system-propert...' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:44:02 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:44:04 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'http://localhost:22')"/>%' OR textbuku LIKE '%<xsl:value-of select="document(...' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:44:04 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:44:05 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'erroneous_command')"/>
+<xsl:variable name="waiting" select="process:waitFor($...' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:44:05 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 00:44:06 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'exec','erroneous_command 2>&amp;1')"/>%' OR textbuku LIKE '%<xsl:value-of sel...' at line 1 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM h...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM h...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM h...')
+#3 D:\Haruman\ci4\app\Views\kategori\pencarian.php(23): CodeIgniter\Database\BaseConnection->query('SELECT * FROM h...')
+#4 D:\Haruman\ci4\system\View\View.php(213): include('D:\\Haruman\\ci4\\...')
+#5 D:\Haruman\ci4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\Haruman\ci4\system\Common.php(1134): CodeIgniter\View\View->render('kategori/pencar...', Array, true)
+#7 D:\Haruman\ci4\app\Controllers\CategoryController.php(163): view('kategori/pencar...', Array)
+#8 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+#9 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#10 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#13 {main}
+CRITICAL - 2022-12-20 00:44:06 --> Call to a member function getNumRows() on bool
+in APPPATH\Views\kategori\pencarian.php on line 24.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kategori/pencarian', [], true)
+ 4 APPPATH\Controllers\CategoryController.php(163): view('kategori/pencarian', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->search()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 00:44:32 --> Undefined variable $session
+in APPPATH\Views\template\awal\footer.php on line 52.
+ 1 APPPATH\Views\template\awal\footer.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'APPPATH\\Views\\template\\awal\\footer.php', 52)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\template\\awal\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/template/awal/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(41): view('/template/awal/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->tentangkita()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 00:44:33 --> Undefined variable $session
+in APPPATH\Views\template\awal\footer.php on line 52.
+ 1 APPPATH\Views\template\awal\footer.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'APPPATH\\Views\\template\\awal\\footer.php', 52)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\template\\awal\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/template/awal/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(41): view('/template/awal/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->tentangkita()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 00:44:33 --> Undefined variable $session
+in APPPATH\Views\template\awal\footer.php on line 52.
+ 1 APPPATH\Views\template\awal\footer.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'APPPATH\\Views\\template\\awal\\footer.php', 52)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\template\\awal\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/template/awal/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(41): view('/template/awal/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->tentangkita()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 00:44:34 --> Undefined variable $session
+in APPPATH\Views\template\awal\footer.php on line 52.
+ 1 APPPATH\Views\template\awal\footer.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'APPPATH\\Views\\template\\awal\\footer.php', 52)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\template\\awal\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/template/awal/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(41): view('/template/awal/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->tentangkita()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 00:44:34 --> Undefined variable $session
+in APPPATH\Views\template\awal\footer.php on line 52.
+ 1 APPPATH\Views\template\awal\footer.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'APPPATH\\Views\\template\\awal\\footer.php', 52)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\template\\awal\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/template/awal/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(41): view('/template/awal/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->tentangkita()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 00:44:35 --> Undefined variable $session
+in APPPATH\Views\template\awal\footer.php on line 52.
+ 1 APPPATH\Views\template\awal\footer.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'APPPATH\\Views\\template\\awal\\footer.php', 52)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\template\\awal\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/template/awal/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(41): view('/template/awal/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->tentangkita()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 00:44:35 --> Undefined variable $session
+in APPPATH\Views\template\awal\footer.php on line 52.
+ 1 APPPATH\Views\template\awal\footer.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'APPPATH\\Views\\template\\awal\\footer.php', 52)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\template\\awal\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/template/awal/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(41): view('/template/awal/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->tentangkita()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 00:44:36 --> Undefined variable $session
+in APPPATH\Views\template\awal\footer.php on line 52.
+ 1 APPPATH\Views\template\awal\footer.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'APPPATH\\Views\\template\\awal\\footer.php', 52)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\template\\awal\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/template/awal/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(41): view('/template/awal/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->tentangkita()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 00:44:36 --> Undefined variable $session
+in APPPATH\Views\template\awal\footer.php on line 52.
+ 1 APPPATH\Views\template\awal\footer.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'APPPATH\\Views\\template\\awal\\footer.php', 52)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\template\\awal\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/template/awal/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(41): view('/template/awal/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->tentangkita()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 00:44:37 --> Undefined variable $session
+in APPPATH\Views\template\awal\footer.php on line 52.
+ 1 APPPATH\Views\template\awal\footer.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'APPPATH\\Views\\template\\awal\\footer.php', 52)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\template\\awal\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/template/awal/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(41): view('/template/awal/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->tentangkita()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 00:44:37 --> Undefined variable $session
+in APPPATH\Views\template\awal\footer.php on line 52.
+ 1 APPPATH\Views\template\awal\footer.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'APPPATH\\Views\\template\\awal\\footer.php', 52)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\template\\awal\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/template/awal/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(41): view('/template/awal/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->tentangkita()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 00:44:37 --> Undefined variable $session
+in APPPATH\Views\template\awal\footer.php on line 52.
+ 1 APPPATH\Views\template\awal\footer.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'APPPATH\\Views\\template\\awal\\footer.php', 52)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\template\\awal\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/template/awal/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(41): view('/template/awal/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->tentangkita()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 01:20:24 --> mysqli_sql_exception: Duplicate entry 'BK02' for key 'id_buku' in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `tr...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tr...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tr...')
+#3 D:\Haruman\ci4\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tr...', Array, false)
+#4 D:\Haruman\ci4\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\Haruman\ci4\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 D:\Haruman\ci4\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\Haruman\ci4\system\BaseModel.php(659): CodeIgniter\Model->insert(Array, false)
+#8 D:\Haruman\ci4\app\Controllers\CategoryController.php(132): CodeIgniter\BaseModel->save(Array)
+#9 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\CategoryController->savePinjam()
+#10 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+#11 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#14 {main}
+CRITICAL - 2022-12-20 01:20:24 --> Duplicate entry 'BK02' for key 'id_buku'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `transaksibuku` (`id_buku`, `id_user`, `judulbuku`, `tanggal_peminjaman`, `tanggal_pengembalian`, `file_buku`) VALUES (\'BK02\', \'10\', \'Mamah aku hilang\', \'2022-12-27\', \'2022-12-26\', \'Asep.pdf\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `transaksibuku` (`id_buku`, `id_user`, `judulbuku`, `tanggal_peminjaman`, `tanggal_pengembalian`, `file_buku`) VALUES (\'BK02\', \'10\', \'Mamah aku hilang\', \'2022-12-27\', \'2022-12-26\', \'Asep.pdf\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `transaksibuku` (`id_buku`, `id_user`, `judulbuku`, `tanggal_peminjaman`, `tanggal_pengembalian`, `file_buku`) VALUES (\'BK02\', \'10\', \'Mamah aku hilang\', \'2022-12-27\', \'2022-12-26\', \'Asep.pdf\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `transaksibuku` (`id_buku`, `id_user`, `judulbuku`, `tanggal_peminjaman`, `tanggal_pengembalian`, `file_buku`) VALUES (:id_buku:, :id_user:, :judulbuku:, :tanggal_peminjaman:, :tanggal_pengembalian:, :file_buku:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(659): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\CategoryController.php(132): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\CategoryController->savePinjam()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CategoryController))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 01:23:52 --> mysqli_sql_exception: Unknown table 'stylecod_pemweb.transaksibuku' in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('DROP TABLE `tra...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DROP TABLE `tra...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DROP TABLE `tra...')
+#3 D:\Haruman\ci4\system\Database\Forge.php(600): CodeIgniter\Database\BaseConnection->query('DROP TABLE `tra...')
+#4 D:\Haruman\ci4\app\Database\Migrations\2022-12-15-095309_Transaksibuku.php(51): CodeIgniter\Database\Forge->dropTable('transaksibuku')
+#5 D:\Haruman\ci4\system\Database\MigrationRunner.php(868): App\Database\Migrations\Transaksibuku->down()
+#6 D:\Haruman\ci4\system\Database\MigrationRunner.php(298): CodeIgniter\Database\MigrationRunner->migrate('down', Object(stdClass))
+#7 D:\Haruman\ci4\system\Commands\Database\MigrateRollback.php(92): CodeIgniter\Database\MigrationRunner->regress(0)
+#8 D:\Haruman\ci4\system\CLI\Commands.php(63): CodeIgniter\Commands\Database\MigrateRollback->run(Array)
+#9 D:\Haruman\ci4\system\CLI\CommandRunner.php(65): CodeIgniter\CLI\Commands->run('migrate:rollbac...', Array)
+#10 D:\Haruman\ci4\system\CLI\CommandRunner.php(51): CodeIgniter\CLI\CommandRunner->index(Array)
+#11 D:\Haruman\ci4\system\CodeIgniter.php(920): CodeIgniter\CLI\CommandRunner->_remap('index', Array)
+#12 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\CLI\CommandRunner))
+#13 D:\Haruman\ci4\system\CodeIgniter.php(347): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 D:\Haruman\ci4\system\CLI\Console.php(48): CodeIgniter\CodeIgniter->run()
+#15 D:\Haruman\ci4\spark(98): CodeIgniter\CLI\Console->run()
+#16 {main}
+ERROR - 2022-12-20 01:29:31 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 8 in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `hl...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hl...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hl...')
+#3 D:\Haruman\ci4\app\Models\IsiDatabaseModel.php(55): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hl...')
+#4 D:\Haruman\ci4\app\Controllers\IsiDatabase.php(31): App\Models\IsiDatabaseModel->hlmnbuku()
+#5 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\IsiDatabase->hlmnbuku()
+#6 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\IsiDatabase))
+#7 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#10 {main}
+CRITICAL - 2022-12-20 01:29:31 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 8
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `hlmnbuku` (`id`, `id_buku`, `judulbuku`, `textbuku`, `kategoribuku`, `author`, `file_buku`, `stok`, `cover_buku`, `total_pinjam`)
+        VALUES
+        (1, \'bk01\', \'Memulai Kembali Mengapa Tidak\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis mi quis dui sollicitudin hendrerit. Duis sollicitudin, libero iaculis laoreet tempus, nisi felis volutpat nisi, eu mollis tellus diam id risus. Praesent sed urna non orci lobortis consectetur. Suspendisse sed odio eget nibh sagittis bibendum. Curabitur aliquet, massa eget rutrum condimentum, felis massa auctor est, sit amet pulvinar ante mi eget velit. Sed in purus in mi mattis gravida non vel mi. Aenean eu aliquam tortor. Aenean dolor tortor, vestibulum et lorem vulputate, blandit pellentesque massa. Morbi mauris elit, condimentum eu odio in, gravida hendrerit metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse odio ligula, placerat eu risus vel, porta accumsan ante. Sed porttitor id turpis id interdum.\', \'Fiction\', \'Aiman Abdurrahman\', \'Memulai Kembali Mengapa Tidak.pdf\', 14, \'Memulai Kembali Mengapa Tidak.jpg\', 4),
+        (2, \'bk02\', \'Andreatta\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis mi quis dui sollicitudin hendrerit. Duis sollicitudin, libero iaculis laoreet tempus, nisi felis volutpat nisi, eu mollis tellus diam id risus. Praesent sed urna non orci lobortis consectetur. Suspendisse sed odio eget nibh sagittis bibendum. Curabitur aliquet, massa eget rutrum condimentum, felis massa auctor est, sit amet pulvinar ante mi eget velit. Sed in purus in mi mattis gravida non vel mi. Aenean eu aliquam tortor. Aenean dolor tortor, vestibulum et lorem vulputate, blandit pellentesque massa. Morbi mauris elit, condimentum eu odio in, gravida hendrerit metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse odio ligula, placerat eu risus vel, porta accumsan ante. Sed porttitor id turpis id interdum.\', \'Mystery, Horror, Fiction\', \'Ardian Hafiz Nurhilman\', \'Andreatta.pdf\', 5, \'Andreatta.jpg\', 2),
+        (3, \'bk03\', \'Syair Sang Mentari\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis mi quis dui sollicitudin hendrerit. Duis sollicitudin, libero iaculis laoreet tempus, nisi felis volutpat nisi, eu mollis tellus diam id risus. Praesent sed urna non orci lobortis consectetur. Suspendisse sed odio eget nibh sagittis bibendum. Curabitur aliquet, massa eget rutrum condimentum, felis massa auctor est, sit amet pulvinar ante mi eget velit. Sed in purus in mi mattis gravida non vel mi. Aenean eu aliquam tortor. Aenean dolor tortor, vestibulum et lorem vulputate, blandit pellentesque massa. Morbi mauris elit, condimentum eu odio in, gravida hendrerit metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse odio ligula, placerat eu risus vel, porta accumsan ante. Sed porttitor id turpis id interdum.\', \'Historical\', \'Muhamad Annur Falah\', \'Syair Sang Mentari.pdf\', 11, \'Syair Sang Mentari.jpg\', 2),
+        (4, \'bk04\', \'Sekawan\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis mi quis dui sollicitudin hendrerit. Duis sollicitudin, libero iaculis laoreet tempus, nisi felis volutpat nisi, eu mollis tellus diam id risus. Praesent sed urna non orci lobortis consectetur. Suspendisse sed odio eget nibh sagittis bibendum. Curabitur aliquet, massa eget rutrum condimentum, felis massa auctor est, sit amet pulvinar ante mi eget velit. Sed in purus in mi mattis gravida non vel mi. Aenean eu aliquam tortor. Aenean dolor tortor, vestibulum et lorem vulputate, blandit pellentesque massa. Morbi mauris elit, condimentum eu odio in, gravida hendrerit metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse odio ligula, placerat eu risus vel, porta accumsan ante. Sed porttitor id turpis id interdum.\', \'Self Improvement\', \'Muhamad Ilham Nuari\', \'Sekawan.pdf\', 11, \'Sekawan.jpg\', 3),
+        (5, \'bk05\', \'Ice Princess\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis mi quis dui sollicitudin hendrerit. Duis sollicitudin, libero iaculis laoreet tempus, nisi felis volutpat nisi, eu mollis tellus diam id risus. Praesent sed urna non orci lobortis consectetur. Suspendisse sed odio eget nibh sagittis bibendum. Curabitur aliquet, massa eget rutrum condimentum, felis massa auctor est, sit amet pulvinar ante mi eget velit. Sed in purus in mi mattis gravida non vel mi. Aenean eu aliquam tortor. Aenean dolor tortor, vestibulum et lorem vulputate, blandit pellentesque massa. Morbi mauris elit, condimentum eu odio in, gravida hendrerit metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse odio ligula, placerat eu risus vel, porta accumsan ante. Sed porttitor id turpis id interdum.\', \'Self Improvement\', \'Nika Qisty Fatharani\', \'Ice Princess.pdf\', 0, \'Ice Princess.jpg\', 5),
+        (6, \'bk06\', \'Gak Jelas\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis mi quis dui sollicitudin hendrerit. Duis sollicitudin, libero iaculis laoreet tempus, nisi felis volutpat nisi, eu mollis tellus diam id risus. Praesent sed urna non orci lobortis consectetur. Suspendisse sed odio eget nibh sagittis bibendum. Curabitur aliquet, massa eget rutrum condimentum, felis massa auctor est, sit amet pulvinar ante mi eget velit. Sed in purus in mi mattis gravida non vel mi. Aenean eu aliquam tortor. Aenean dolor tortor, vestibulum et lorem vulputate, blandit pellentesque massa. Morbi mauris elit, condimentum eu odio in, gravida hendrerit metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse odio ligula, placerat eu risus vel, porta accumsan ante. Sed porttitor id turpis id interdum.\', \'Gak jelas\', \'Haruman\', \'Gak Jelas.pdf\', 2, \'Gak Jelas.jpg\', 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hlmnbuku` (`id`, `id_buku`, `judulbuku`, `textbuku`, `kategoribuku`, `author`, `file_buku`, `stok`, `cover_buku`, `total_pinjam`)
+        VALUES
+        (1, \'bk01\', \'Memulai Kembali Mengapa Tidak\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis mi quis dui sollicitudin hendrerit. Duis sollicitudin, libero iaculis laoreet tempus, nisi felis volutpat nisi, eu mollis tellus diam id risus. Praesent sed urna non orci lobortis consectetur. Suspendisse sed odio eget nibh sagittis bibendum. Curabitur aliquet, massa eget rutrum condimentum, felis massa auctor est, sit amet pulvinar ante mi eget velit. Sed in purus in mi mattis gravida non vel mi. Aenean eu aliquam tortor. Aenean dolor tortor, vestibulum et lorem vulputate, blandit pellentesque massa. Morbi mauris elit, condimentum eu odio in, gravida hendrerit metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse odio ligula, placerat eu risus vel, porta accumsan ante. Sed porttitor id turpis id interdum.\', \'Fiction\', \'Aiman Abdurrahman\', \'Memulai Kembali Mengapa Tidak.pdf\', 14, \'Memulai Kembali Mengapa Tidak.jpg\', 4),
+        (2, \'bk02\', \'Andreatta\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis mi quis dui sollicitudin hendrerit. Duis sollicitudin, libero iaculis laoreet tempus, nisi felis volutpat nisi, eu mollis tellus diam id risus. Praesent sed urna non orci lobortis consectetur. Suspendisse sed odio eget nibh sagittis bibendum. Curabitur aliquet, massa eget rutrum condimentum, felis massa auctor est, sit amet pulvinar ante mi eget velit. Sed in purus in mi mattis gravida non vel mi. Aenean eu aliquam tortor. Aenean dolor tortor, vestibulum et lorem vulputate, blandit pellentesque massa. Morbi mauris elit, condimentum eu odio in, gravida hendrerit metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse odio ligula, placerat eu risus vel, porta accumsan ante. Sed porttitor id turpis id interdum.\', \'Mystery, Horror, Fiction\', \'Ardian Hafiz Nurhilman\', \'Andreatta.pdf\', 5, \'Andreatta.jpg\', 2),
+        (3, \'bk03\', \'Syair Sang Mentari\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis mi quis dui sollicitudin hendrerit. Duis sollicitudin, libero iaculis laoreet tempus, nisi felis volutpat nisi, eu mollis tellus diam id risus. Praesent sed urna non orci lobortis consectetur. Suspendisse sed odio eget nibh sagittis bibendum. Curabitur aliquet, massa eget rutrum condimentum, felis massa auctor est, sit amet pulvinar ante mi eget velit. Sed in purus in mi mattis gravida non vel mi. Aenean eu aliquam tortor. Aenean dolor tortor, vestibulum et lorem vulputate, blandit pellentesque massa. Morbi mauris elit, condimentum eu odio in, gravida hendrerit metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse odio ligula, placerat eu risus vel, porta accumsan ante. Sed porttitor id turpis id interdum.\', \'Historical\', \'Muhamad Annur Falah\', \'Syair Sang Mentari.pdf\', 11, \'Syair Sang Mentari.jpg\', 2),
+        (4, \'bk04\', \'Sekawan\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis mi quis dui sollicitudin hendrerit. Duis sollicitudin, libero iaculis laoreet tempus, nisi felis volutpat nisi, eu mollis tellus diam id risus. Praesent sed urna non orci lobortis consectetur. Suspendisse sed odio eget nibh sagittis bibendum. Curabitur aliquet, massa eget rutrum condimentum, felis massa auctor est, sit amet pulvinar ante mi eget velit. Sed in purus in mi mattis gravida non vel mi. Aenean eu aliquam tortor. Aenean dolor tortor, vestibulum et lorem vulputate, blandit pellentesque massa. Morbi mauris elit, condimentum eu odio in, gravida hendrerit metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse odio ligula, placerat eu risus vel, porta accumsan ante. Sed porttitor id turpis id interdum.\', \'Self Improvement\', \'Muhamad Ilham Nuari\', \'Sekawan.pdf\', 11, \'Sekawan.jpg\', 3),
+        (5, \'bk05\', \'Ice Princess\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis mi quis dui sollicitudin hendrerit. Duis sollicitudin, libero iaculis laoreet tempus, nisi felis volutpat nisi, eu mollis tellus diam id risus. Praesent sed urna non orci lobortis consectetur. Suspendisse sed odio eget nibh sagittis bibendum. Curabitur aliquet, massa eget rutrum condimentum, felis massa auctor est, sit amet pulvinar ante mi eget velit. Sed in purus in mi mattis gravida non vel mi. Aenean eu aliquam tortor. Aenean dolor tortor, vestibulum et lorem vulputate, blandit pellentesque massa. Morbi mauris elit, condimentum eu odio in, gravida hendrerit metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse odio ligula, placerat eu risus vel, porta accumsan ante. Sed porttitor id turpis id interdum.\', \'Self Improvement\', \'Nika Qisty Fatharani\', \'Ice Princess.pdf\', 0, \'Ice Princess.jpg\', 5),
+        (6, \'bk06\', \'Gak Jelas\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis mi quis dui sollicitudin hendrerit. Duis sollicitudin, libero iaculis laoreet tempus, nisi felis volutpat nisi, eu mollis tellus diam id risus. Praesent sed urna non orci lobortis consectetur. Suspendisse sed odio eget nibh sagittis bibendum. Curabitur aliquet, massa eget rutrum condimentum, felis massa auctor est, sit amet pulvinar ante mi eget velit. Sed in purus in mi mattis gravida non vel mi. Aenean eu aliquam tortor. Aenean dolor tortor, vestibulum et lorem vulputate, blandit pellentesque massa. Morbi mauris elit, condimentum eu odio in, gravida hendrerit metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse odio ligula, placerat eu risus vel, porta accumsan ante. Sed porttitor id turpis id interdum.\', \'Gak jelas\', \'Haruman\', \'Gak Jelas.pdf\', 2, \'Gak Jelas.jpg\', 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hlmnbuku` (`id`, `id_buku`, `judulbuku`, `textbuku`, `kategoribuku`, `author`, `file_buku`, `stok`, `cover_buku`, `total_pinjam`)
+        VALUES
+        (1, \'bk01\', \'Memulai Kembali Mengapa Tidak\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis mi quis dui sollicitudin hendrerit. Duis sollicitudin, libero iaculis laoreet tempus, nisi felis volutpat nisi, eu mollis tellus diam id risus. Praesent sed urna non orci lobortis consectetur. Suspendisse sed odio eget nibh sagittis bibendum. Curabitur aliquet, massa eget rutrum condimentum, felis massa auctor est, sit amet pulvinar ante mi eget velit. Sed in purus in mi mattis gravida non vel mi. Aenean eu aliquam tortor. Aenean dolor tortor, vestibulum et lorem vulputate, blandit pellentesque massa. Morbi mauris elit, condimentum eu odio in, gravida hendrerit metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse odio ligula, placerat eu risus vel, porta accumsan ante. Sed porttitor id turpis id interdum.\', \'Fiction\', \'Aiman Abdurrahman\', \'Memulai Kembali Mengapa Tidak.pdf\', 14, \'Memulai Kembali Mengapa Tidak.jpg\', 4),
+        (2, \'bk02\', \'Andreatta\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis mi quis dui sollicitudin hendrerit. Duis sollicitudin, libero iaculis laoreet tempus, nisi felis volutpat nisi, eu mollis tellus diam id risus. Praesent sed urna non orci lobortis consectetur. Suspendisse sed odio eget nibh sagittis bibendum. Curabitur aliquet, massa eget rutrum condimentum, felis massa auctor est, sit amet pulvinar ante mi eget velit. Sed in purus in mi mattis gravida non vel mi. Aenean eu aliquam tortor. Aenean dolor tortor, vestibulum et lorem vulputate, blandit pellentesque massa. Morbi mauris elit, condimentum eu odio in, gravida hendrerit metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse odio ligula, placerat eu risus vel, porta accumsan ante. Sed porttitor id turpis id interdum.\', \'Mystery, Horror, Fiction\', \'Ardian Hafiz Nurhilman\', \'Andreatta.pdf\', 5, \'Andreatta.jpg\', 2),
+        (3, \'bk03\', \'Syair Sang Mentari\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis mi quis dui sollicitudin hendrerit. Duis sollicitudin, libero iaculis laoreet tempus, nisi felis volutpat nisi, eu mollis tellus diam id risus. Praesent sed urna non orci lobortis consectetur. Suspendisse sed odio eget nibh sagittis bibendum. Curabitur aliquet, massa eget rutrum condimentum, felis massa auctor est, sit amet pulvinar ante mi eget velit. Sed in purus in mi mattis gravida non vel mi. Aenean eu aliquam tortor. Aenean dolor tortor, vestibulum et lorem vulputate, blandit pellentesque massa. Morbi mauris elit, condimentum eu odio in, gravida hendrerit metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse odio ligula, placerat eu risus vel, porta accumsan ante. Sed porttitor id turpis id interdum.\', \'Historical\', \'Muhamad Annur Falah\', \'Syair Sang Mentari.pdf\', 11, \'Syair Sang Mentari.jpg\', 2),
+        (4, \'bk04\', \'Sekawan\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis mi quis dui sollicitudin hendrerit. Duis sollicitudin, libero iaculis laoreet tempus, nisi felis volutpat nisi, eu mollis tellus diam id risus. Praesent sed urna non orci lobortis consectetur. Suspendisse sed odio eget nibh sagittis bibendum. Curabitur aliquet, massa eget rutrum condimentum, felis massa auctor est, sit amet pulvinar ante mi eget velit. Sed in purus in mi mattis gravida non vel mi. Aenean eu aliquam tortor. Aenean dolor tortor, vestibulum et lorem vulputate, blandit pellentesque massa. Morbi mauris elit, condimentum eu odio in, gravida hendrerit metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse odio ligula, placerat eu risus vel, porta accumsan ante. Sed porttitor id turpis id interdum.\', \'Self Improvement\', \'Muhamad Ilham Nuari\', \'Sekawan.pdf\', 11, \'Sekawan.jpg\', 3),
+        (5, \'bk05\', \'Ice Princess\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis mi quis dui sollicitudin hendrerit. Duis sollicitudin, libero iaculis laoreet tempus, nisi felis volutpat nisi, eu mollis tellus diam id risus. Praesent sed urna non orci lobortis consectetur. Suspendisse sed odio eget nibh sagittis bibendum. Curabitur aliquet, massa eget rutrum condimentum, felis massa auctor est, sit amet pulvinar ante mi eget velit. Sed in purus in mi mattis gravida non vel mi. Aenean eu aliquam tortor. Aenean dolor tortor, vestibulum et lorem vulputate, blandit pellentesque massa. Morbi mauris elit, condimentum eu odio in, gravida hendrerit metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse odio ligula, placerat eu risus vel, porta accumsan ante. Sed porttitor id turpis id interdum.\', \'Self Improvement\', \'Nika Qisty Fatharani\', \'Ice Princess.pdf\', 0, \'Ice Princess.jpg\', 5),
+        (6, \'bk06\', \'Gak Jelas\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis mi quis dui sollicitudin hendrerit. Duis sollicitudin, libero iaculis laoreet tempus, nisi felis volutpat nisi, eu mollis tellus diam id risus. Praesent sed urna non orci lobortis consectetur. Suspendisse sed odio eget nibh sagittis bibendum. Curabitur aliquet, massa eget rutrum condimentum, felis massa auctor est, sit amet pulvinar ante mi eget velit. Sed in purus in mi mattis gravida non vel mi. Aenean eu aliquam tortor. Aenean dolor tortor, vestibulum et lorem vulputate, blandit pellentesque massa. Morbi mauris elit, condimentum eu odio in, gravida hendrerit metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse odio ligula, placerat eu risus vel, porta accumsan ante. Sed porttitor id turpis id interdum.\', \'Gak jelas\', \'Haruman\', \'Gak Jelas.pdf\', 2, \'Gak Jelas.jpg\', 1')
+ 4 APPPATH\Models\IsiDatabaseModel.php(55): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hlmnbuku` (`id`, `id_buku`, `judulbuku`, `textbuku`, `kategoribuku`, `author`, `file_buku`, `stok`, `cover_buku`, `total_pinjam`)
+        VALUES
+        (1, \'bk01\', \'Memulai Kembali Mengapa Tidak\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis mi quis dui sollicitudin hendrerit. Duis sollicitudin, libero iaculis laoreet tempus, nisi felis volutpat nisi, eu mollis tellus diam id risus. Praesent sed urna non orci lobortis consectetur. Suspendisse sed odio eget nibh sagittis bibendum. Curabitur aliquet, massa eget rutrum condimentum, felis massa auctor est, sit amet pulvinar ante mi eget velit. Sed in purus in mi mattis gravida non vel mi. Aenean eu aliquam tortor. Aenean dolor tortor, vestibulum et lorem vulputate, blandit pellentesque massa. Morbi mauris elit, condimentum eu odio in, gravida hendrerit metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse odio ligula, placerat eu risus vel, porta accumsan ante. Sed porttitor id turpis id interdum.\', \'Fiction\', \'Aiman Abdurrahman\', \'Memulai Kembali Mengapa Tidak.pdf\', 14, \'Memulai Kembali Mengapa Tidak.jpg\', 4),
+        (2, \'bk02\', \'Andreatta\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis mi quis dui sollicitudin hendrerit. Duis sollicitudin, libero iaculis laoreet tempus, nisi felis volutpat nisi, eu mollis tellus diam id risus. Praesent sed urna non orci lobortis consectetur. Suspendisse sed odio eget nibh sagittis bibendum. Curabitur aliquet, massa eget rutrum condimentum, felis massa auctor est, sit amet pulvinar ante mi eget velit. Sed in purus in mi mattis gravida non vel mi. Aenean eu aliquam tortor. Aenean dolor tortor, vestibulum et lorem vulputate, blandit pellentesque massa. Morbi mauris elit, condimentum eu odio in, gravida hendrerit metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse odio ligula, placerat eu risus vel, porta accumsan ante. Sed porttitor id turpis id interdum.\', \'Mystery, Horror, Fiction\', \'Ardian Hafiz Nurhilman\', \'Andreatta.pdf\', 5, \'Andreatta.jpg\', 2),
+        (3, \'bk03\', \'Syair Sang Mentari\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis mi quis dui sollicitudin hendrerit. Duis sollicitudin, libero iaculis laoreet tempus, nisi felis volutpat nisi, eu mollis tellus diam id risus. Praesent sed urna non orci lobortis consectetur. Suspendisse sed odio eget nibh sagittis bibendum. Curabitur aliquet, massa eget rutrum condimentum, felis massa auctor est, sit amet pulvinar ante mi eget velit. Sed in purus in mi mattis gravida non vel mi. Aenean eu aliquam tortor. Aenean dolor tortor, vestibulum et lorem vulputate, blandit pellentesque massa. Morbi mauris elit, condimentum eu odio in, gravida hendrerit metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse odio ligula, placerat eu risus vel, porta accumsan ante. Sed porttitor id turpis id interdum.\', \'Historical\', \'Muhamad Annur Falah\', \'Syair Sang Mentari.pdf\', 11, \'Syair Sang Mentari.jpg\', 2),
+        (4, \'bk04\', \'Sekawan\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis mi quis dui sollicitudin hendrerit. Duis sollicitudin, libero iaculis laoreet tempus, nisi felis volutpat nisi, eu mollis tellus diam id risus. Praesent sed urna non orci lobortis consectetur. Suspendisse sed odio eget nibh sagittis bibendum. Curabitur aliquet, massa eget rutrum condimentum, felis massa auctor est, sit amet pulvinar ante mi eget velit. Sed in purus in mi mattis gravida non vel mi. Aenean eu aliquam tortor. Aenean dolor tortor, vestibulum et lorem vulputate, blandit pellentesque massa. Morbi mauris elit, condimentum eu odio in, gravida hendrerit metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse odio ligula, placerat eu risus vel, porta accumsan ante. Sed porttitor id turpis id interdum.\', \'Self Improvement\', \'Muhamad Ilham Nuari\', \'Sekawan.pdf\', 11, \'Sekawan.jpg\', 3),
+        (5, \'bk05\', \'Ice Princess\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis mi quis dui sollicitudin hendrerit. Duis sollicitudin, libero iaculis laoreet tempus, nisi felis volutpat nisi, eu mollis tellus diam id risus. Praesent sed urna non orci lobortis consectetur. Suspendisse sed odio eget nibh sagittis bibendum. Curabitur aliquet, massa eget rutrum condimentum, felis massa auctor est, sit amet pulvinar ante mi eget velit. Sed in purus in mi mattis gravida non vel mi. Aenean eu aliquam tortor. Aenean dolor tortor, vestibulum et lorem vulputate, blandit pellentesque massa. Morbi mauris elit, condimentum eu odio in, gravida hendrerit metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse odio ligula, placerat eu risus vel, porta accumsan ante. Sed porttitor id turpis id interdum.\', \'Self Improvement\', \'Nika Qisty Fatharani\', \'Ice Princess.pdf\', 0, \'Ice Princess.jpg\', 5),
+        (6, \'bk06\', \'Gak Jelas\', \'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis mi quis dui sollicitudin hendrerit. Duis sollicitudin, libero iaculis laoreet tempus, nisi felis volutpat nisi, eu mollis tellus diam id risus. Praesent sed urna non orci lobortis consectetur. Suspendisse sed odio eget nibh sagittis bibendum. Curabitur aliquet, massa eget rutrum condimentum, felis massa auctor est, sit amet pulvinar ante mi eget velit. Sed in purus in mi mattis gravida non vel mi. Aenean eu aliquam tortor. Aenean dolor tortor, vestibulum et lorem vulputate, blandit pellentesque massa. Morbi mauris elit, condimentum eu odio in, gravida hendrerit metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse odio ligula, placerat eu risus vel, porta accumsan ante. Sed porttitor id turpis id interdum.\', \'Gak jelas\', \'Haruman\', \'Gak Jelas.pdf\', 2, \'Gak Jelas.jpg\', 1')
+ 5 APPPATH\Controllers\IsiDatabase.php(31): App\Models\IsiDatabaseModel->hlmnbuku()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\IsiDatabase->hlmnbuku()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\IsiDatabase))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-20 01:29:42 --> mysqli_sql_exception: Duplicate entry '1' for key 'PRIMARY' in D:\Haruman\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Haruman\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `bu...', 0)
+#1 D:\Haruman\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bu...')
+#2 D:\Haruman\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bu...')
+#3 D:\Haruman\ci4\app\Models\IsiDatabaseModel.php(44): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bu...')
+#4 D:\Haruman\ci4\app\Controllers\IsiDatabase.php(48): App\Models\IsiDatabaseModel->bukutersedia()
+#5 D:\Haruman\ci4\system\CodeIgniter.php(927): App\Controllers\IsiDatabase->bukutersedia()
+#6 D:\Haruman\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\IsiDatabase))
+#7 D:\Haruman\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Haruman\ci4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\Haruman\ci4\system\Commands\Server\rewrite.php(46): require_once('D:\\Haruman\\ci4\\...')
+#10 {main}
+CRITICAL - 2022-12-20 01:29:42 --> Duplicate entry '1' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `bukutersedia` (`id`, `judulbuku`, `id_buku`, `stok`) VALUES
+        (1, \'Memulai Kembali Mengapa Tidak\', \'bk01\', 15),
+        (2, \'Andreatta\', \'bk02\', 15),
+        (3, \'Syair Sang Mentari\', \'bk03\', 12),
+        (4, \'Sekawan\', \'bk04\', 11),
+        (5, \'Ice Princess\', \'bk05\', 15),
+        (6, \'Gak Jelas\', \'bk06\', 14)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bukutersedia` (`id`, `judulbuku`, `id_buku`, `stok`) VALUES
+        (1, \'Memulai Kembali Mengapa Tidak\', \'bk01\', 15),
+        (2, \'Andreatta\', \'bk02\', 15),
+        (3, \'Syair Sang Mentari\', \'bk03\', 12),
+        (4, \'Sekawan\', \'bk04\', 11),
+        (5, \'Ice Princess\', \'bk05\', 15),
+        (6, \'Gak Jelas\', \'bk06\', 14)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bukutersedia` (`id`, `judulbuku`, `id_buku`, `stok`) VALUES
+        (1, \'Memulai Kembali Mengapa Tidak\', \'bk01\', 15),
+        (2, \'Andreatta\', \'bk02\', 15),
+        (3, \'Syair Sang Mentari\', \'bk03\', 12),
+        (4, \'Sekawan\', \'bk04\', 11),
+        (5, \'Ice Princess\', \'bk05\', 15),
+        (6, \'Gak Jelas\', \'bk06\', 14)')
+ 4 APPPATH\Models\IsiDatabaseModel.php(44): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bukutersedia` (`id`, `judulbuku`, `id_buku`, `stok`) VALUES
+        (1, \'Memulai Kembali Mengapa Tidak\', \'bk01\', 15),
+        (2, \'Andreatta\', \'bk02\', 15),
+        (3, \'Syair Sang Mentari\', \'bk03\', 12),
+        (4, \'Sekawan\', \'bk04\', 11),
+        (5, \'Ice Princess\', \'bk05\', 15),
+        (6, \'Gak Jelas\', \'bk06\', 14)')
+ 5 APPPATH\Controllers\IsiDatabase.php(48): App\Models\IsiDatabaseModel->bukutersedia()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\IsiDatabase->bukutersedia()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\IsiDatabase))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

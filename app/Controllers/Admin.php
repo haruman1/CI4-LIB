@@ -63,6 +63,67 @@ class Admin extends BaseController
                 . view('admin/kelolabuku', $data);
         }
     }
+    public function tambahBuku()
+    {
+        if ($this->session->get('role') == 2 || $this->session->get('role') == NULL) {
+            return redirect()->to('/');
+        } else {
+            if (!$this->validate(
+                [
+                    'judulbuku' => [
+                        'rules' => 'required|min_length[3]|is_unique[user.email.id,{id}]',
+                        'errors' => [
+                            'required' => 'Email wajib di isi',
+                            'min_length[3]' => 'Email terlalu pendek',
+                            'is_unique' => 'Email sudah ada,silahkan gunakan yang lain',
+                        ],
+                    ],
+                    'kategoribuku' => [
+                        'rules' => 'required|min_length[3]|max_length[20]',
+                        'errors' => [
+                            'required' => 'Nama wajib di isi',
+                            'min_length[3]' => 'Nama terlalu pendek',
+                            'max_length[20]' => 'Nama terlalu panjang',
+                        ],
+                    ],
+
+                    'author' => [
+                        'rules' => 'required|min_length[3]|max_length[20]|is_unique[user.username.id,{id}]',
+                        'errors' => [
+                            'required' => 'Username wajib di isi',
+                            'min_length[3]' => 'Username terlalu pendek',
+                            'max_length[20]' => 'Username terlalu panjang',
+                            'is_unique' => 'Username sudah ada, silahkan gunakan yang lain',
+
+                        ],
+                    ],
+                    'stok' => [
+                        'rules' => 'required|trim|min_length[8]',
+                        'errors' => [
+                            'required' => 'Password wajib di isi',
+                            'min_length[8]' => 'Password terlalu pendek',
+
+                        ],
+                    ],
+                ]
+
+            )) {
+                $this->session->setTempdata(' Emailerror', $this->validation->getError('email_user'), 10);
+                $this->session->setTempdata('Usernamerror', $this->validation->getError('username'), 10);
+                $this->session->setTempdata('Namaerror', $this->validation->getError('nama'), 10);
+                $this->session->setTempdata('Passworderror', $this->validation->getError('password'), 10);
+                $this->session->setTempdata('PasswordConferror', $this->validation->getError('password_sama'), 10);
+
+                return view('/template/admin/header')
+                    . view('admin/kelolaanggota', [
+                        'validation' => $this->validation,
+                        'session' => $this->session,
+                        'title' => 'Register' . $_ENV['app.name'],
+                        'db' => $this->db,
+                    ]);
+            }
+        }
+    }
     public function transaksi()
     {
         if ($this->session->get('role') == 2 || $this->session->get('role') == NULL) {

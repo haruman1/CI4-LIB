@@ -25,7 +25,7 @@ class Home extends BaseController
 
             return view('/template/awal/header',  $data)
                 . view('home/index', $data)
-                . view('/template/awal/footer');
+                . view('/template/awal/footer', $data);
         } else {
             return redirect()->to('/admin');
         }
@@ -38,6 +38,6 @@ class Home extends BaseController
         return view('/template/awal/header')
             . view('template/sidebar/nama-halaman')
             . view('home/viewAbout', $data)
-            . view('/template/awal/footer');
+            . view('/template/awal/footer', $data);
     }
 }

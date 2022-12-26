@@ -22,6 +22,7 @@ $login_password_valid = false;
                                 echo ' <small class="text-danger pl-3">' . $session->getTempdata('errorUsername') . '</small>';
                             }
                             ?>
+
                             <div class="row align-items-center">
                                 <div class="col-12">
 
@@ -33,11 +34,9 @@ $login_password_valid = false;
                                             <span class="far fa-user"></span>
                                         </div>
 
-                                        <?php
-
-                                        ?><input class="form-control" type="text" placeholder="Masukkan username Anda" aria-label="Text input with dropdown button" name="login_username" value="<?php if (isset($_COOKIE['login_username_cookie'])) {
-                                                                                                                                                                                                        echo $_COOKIE['login_username_cookie'];
-                                                                                                                                                                                                    } ?>" />
+                                        <input class="form-control" type="text" placeholder="Masukkan username Anda" aria-label="Text input with dropdown button" name="login_username" value="<?php if (isset($_COOKIE['login_username_cookie'])) {
+                                                                                                                                                                                                    echo $_COOKIE['login_username_cookie'];
+                                                                                                                                                                                                } ?>" />
 
                                     </div>
 

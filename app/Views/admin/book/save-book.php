@@ -5,57 +5,60 @@ require_once __DIR__ . '/../../inc/env.php';
 require_once __DIR__ . '/../../inc/koneksi.php';
 require_once __DIR__ . '/../../vendor/autoload.php';
 
-    $sumber = @$_FILES['file_buku']['tmp_name'];
-	$target = '../../../assets/pdf/';
-	$nama_file = @$_FILES['file_buku']['name'];
-	$pindah = move_uploaded_file($sumber, $target.$nama_file);
+$sumber = @$_FILES['file_buku']['tmp_name'];
+$target = '../../../assets/pdf/';
+$nama_file = @$_FILES['file_buku']['name'];
+$pindah = move_uploaded_file($sumber, $target . $nama_file);
 
-    $sumber2 = @$_FILES['cover_buku']['tmp_name'];
-    $target2 = '../../../assets/img/buku/';
-    $nama_file2 = @$_FILES['cover_buku']['name'];
-    $pindah2 = move_uploaded_file($sumber2, $target2.$nama_file2);
+$sumber2 = @$_FILES['cover_buku']['tmp_name'];
+$target2 = '../../../assets/img/buku/';
+$nama_file2 = @$_FILES['cover_buku']['name'];
+$pindah2 = move_uploaded_file($sumber2, $target2 . $nama_file2);
 
-    if (isset ($_POST['Simpan'])){
-		
-		if(!empty($sumber)){
-        $sql_simpan = "INSERT INTO hlmnbuku (id_buku,judulbuku,kategoribuku,author,stok,cover_buku,file_buku) VALUES (
-       '".$_POST['id_buku']."',
-       '".$_POST['judulbuku']."',
-       '".$_POST['kategoribuku']."',
-       '".$_POST['author']."',
-       '".$_POST['stok']."',
-       '".$nama_file2."',
-       '".$nama_file."')";
-     $query_simpan = mysqli_query($con, $sql_simpan);
-     mysqli_close($con);
+if (isset($_POST['Simpan'])) {
 
-    if ($query_simpan){
+    if (!empty($sumber)) {
+        $sql_simpan = "INSERT INTO hlmnbuku (id_buku,judulbuku,kategoribuku,author,stok,cover_buku,file_buku) 
+        VALUES (
+       '" . $_POST['id_buku'] . "',
+       '" . $_POST['judulbuku'] . "',
+       '" . $_POST['kategoribuku'] . "',
+       '" . $_POST['author'] . "',
+       '" . $_POST['stok'] . "',
+       '" . $nama_file2 . "',
+       '" . $nama_file . "')";
+        $query_simpan = mysqli_query($con, $sql_simpan);
+        mysqli_close($con);
 
-      echo "<script>
+        if ($query_simpan) {
+
+            echo "<script>
       Swal.fire({title: 'Tambah Data Berhasil',text: '',icon: 'success',confirmButtonText: 'OK'
       }).then((result) => {
           if (result.value) {
               window.location = '../kelolabuku.php;
           }
       })</script>";
-      header('Location: ../kelolabuku.php?status=sukses');
-      }else{
-      echo "<script>
+            header('Location: ../kelolabuku.php?status=sukses');
+        } else {
+            echo "<script>
       Swal.fire({title: 'Tambah Data Gagal',text: '',icon: 'error',confirmButtonText: 'OK'
       }).then((result) => {
           if (result.value) {
               window.location = '../kelolabuku.php';
           }
 	  })</script>";
-		}
-		}elseif(empty($sumber)){
-		echo "<script>
+        }
+    } elseif (empty($sumber)) {
+        echo "<script>
 		Swal.fire({title: 'Gagal, File Buku Kosong',text: '',icon: 'error',confirmButtonText: 'OK'
 		}).then((result) => {
 			if (result.value) {
 				window.location = '../kelolabuku.php';
 			}
-		})</script>";}}
+		})</script>";
+    }
+}
     // $sql_simpan = "INSERT INTO hlmnbuku (judulbuku,kategoribuku,author,file_buku) VALUES (
     //     '".$_POST['judulbuku']."',
     //    '".$_POST['kategoribuku']."',
@@ -74,5 +77,3 @@ require_once __DIR__ . '/../../vendor/autoload.php';
     //     // header('Location: index.php?status=gagal');
     //     echo "gagal";
     // }
-
-?>

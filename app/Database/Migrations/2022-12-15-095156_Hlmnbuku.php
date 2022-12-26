@@ -63,7 +63,6 @@ class Hlmnbuku extends Migration
             ],
         ]);
         $this->forge->addKey('id', true);
-        $this->forge->addUniqueKey('id_buku');
         $this->forge->addUniqueKey('judulbuku');
         $this->forge->addForeignKey('id_buku', 'bukutersedia', 'id_buku');
         $this->forge->createTable('hlmnbuku', true);

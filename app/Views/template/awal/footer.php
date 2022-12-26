@@ -48,7 +48,23 @@
 
     </body>
 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <?php if ($session->getTempdata('pesanError', 1)) {
+        redirect()->to(base_url('/'));
+    ?>
+        <script>
+            Swal.fire({
+                title: '<?php echo $session->getTempdata('pesanError') ?>',
+                icon: 'error',
+                confirmButtonText: 'Ok'
+            });
+        </script>
 
+    <?php
+        redirect()->to(base_url('/'));
+    }
+
+    ?>
 
 
     </html>
