@@ -75,7 +75,8 @@
         </div>
         <div class="row g-4">
             <?php
-            $sql = $db->query("SELECT * FROM trendingbook WHERE kategoribuku LIKE '%Historical%' ");
+            // $sql = $db->query("SELECT * FROM trendingbook WHERE kategoribuku LIKE '%Historical%' ");
+            $sql = $db->table('trendingbook')->where('kategoribuku', 'Historical')->get();
             foreach ($sql->getResultArray() as $data) {
             ?>
                 <div class="col-md-5 col-lg-3">

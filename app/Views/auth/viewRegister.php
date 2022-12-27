@@ -23,7 +23,7 @@
                                         echo ' <small class="text-danger pl-3">' . $session->getTempdata('errorNama') . '</small>';
                                     }
                                     ?>
-                                    <input class="form-control" type="text" placeholder="Masukkan Nama Full Anda" aria-label="Fullname" name="nama_user" id="nama_anda" value="<?= set_value('nama_user') ?>" />
+                                    <input class="form-control" type="text" placeholder="Masukkan Nama Full Anda" aria-label="Fullname" name="nama_user" id="nama_user" value="<?= set_value('nama_user') ?>" />
                                 </div>
 
                                 <div class="col-12">
@@ -32,7 +32,7 @@
                                         echo ' <small class="text-danger pl-3">' . $session->getTempdata('errorEmail') . '</small>';
                                     }
                                     ?>
-                                    <input class="form-control" type="email" placeholder="Email Address" aria-label="Email Address" name="email_user" id="regist_email" value="<?= set_value('email_user') ?>" />
+                                    <input class="form-control" type="email" placeholder="Email Address" aria-label="Email Address" name="email_user" id="email_user" value="<?= set_value('email_user') ?>" />
 
                                 </div>
 

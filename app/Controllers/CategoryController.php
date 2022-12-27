@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\CategoryModel;
+use App\Models\MyBookModel;
 
 class CategoryController extends BaseController
 {
@@ -11,6 +12,7 @@ class CategoryController extends BaseController
     {
         $this->db = \Config\Database::connect();
         $this->cModel = new CategoryModel();
+        $this->mModel = new MyBookModel();
         $this->builder = $this->db->table('hlmnbuku');
         $this->validation = \Config\Services::validation();
         $this->session = \Config\Services::session();
@@ -129,10 +131,49 @@ class CategoryController extends BaseController
                     'file_buku' => $this->request->getVar('file_buku'),
 
                 ];
+                $dataM = [
+                    'id_buku' => $this->request->getVar('id_buku'),
+                    'judulbuku' => $this->request->getVar('judulbuku'),
+                    'file_buku' => $this->request->getVar('file_buku'),
+                    'id_user' => $this->session->get('id_user'),
+                ];
+
                 $this->cModel->save($data);
+                $this->mModel->save($dataM);
                 $this->session->setTempdata('pesanBuku', 'Buku berhasil di pinjam', 10);
                 return redirect()->to(base_url('/category/mybook'));
             }
+        } else {
+            $this->session->setTempdata('pesanBuku', 'Maaf, akun kamu tidak bisa meminjam buku ', 10);
+            return redirect()->to('/');
+        }
+    }
+    public function deletepinjambuku($id_buku = null)
+    {
+        if ($id_buku != null) {
+            $this->mModel->delete($id_buku);
+            $this->cModel->delete($id_buku);
+            $this->session->setTempdata('pesanBuku', 'Pinjaman buku berhasil di hapus', 10);
+            return redirect()->to(base_url('/category/mybook'));
+        } else {
+            $this->session->setTempdata('pesanBuku', 'Pinjaman buku gagal di hapus', 10);
+            return redirect()->to(base_url('/category/mybook'));
+        }
+    }
+    public function baca_buku()
+    {
+        if ($this->session->get('role') == 2) {
+            $data = [
+                'title' => 'Pinjam Buku',
+                'db' => $this->db,
+                'session' => $this->session,
+                'request' => $this->request,
+            ];
+            return view('/template/awal/header')
+                . view('template/sidebar/nama-halaman')
+                . view('template/sidebar/search-halaman')
+                . view('kategori/viewBacaBuku', $data)
+                . view('/template/awal/footer', $data);
         } else {
             $this->session->setTempdata('pesanBuku', 'Maaf, akun kamu tidak bisa meminjam buku ', 10);
             return redirect()->to('/');

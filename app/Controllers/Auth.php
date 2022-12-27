@@ -187,6 +187,7 @@ class Auth extends BaseController
 
             )) {
                 helper('form');
+
                 $data = [
                     'title' => 'Register' . $_ENV['app.name'],
                 ];
@@ -202,6 +203,7 @@ class Auth extends BaseController
                     . view('template/auth/footer');
             } else {
                 $username = $this->request->getVar('login_username');
+
                 $password = $this->request->getVar('login_password');
                 $cek = $this->AuthModel->where('username', $username)->first();
                 if ($cek) {

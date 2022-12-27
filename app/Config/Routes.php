@@ -44,6 +44,8 @@ $routes->get('/category/borrow', 'CategoryController::pinjam_buku');
 $routes->post('/category/borrow/book', 'CategoryController::savePinjam');
 $routes->get('/category/search', 'CategoryController::search');
 $routes->get('/category/mybook', 'CategoryController::buku_saya');
+$routes->get('/category/read', 'CategoryController::baca_buku');
+$routes->get('category/mybook/deletedata_pinjam', 'CategoryController::deletepinjambuku');
 
 $routes->get('/login', 'Auth::login');
 $routes->post('/login', 'Auth::loginSave');
