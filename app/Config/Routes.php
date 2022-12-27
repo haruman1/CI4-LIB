@@ -60,6 +60,8 @@ $routes->get('/admin/anggota', 'Admin::editUser');
 $routes->post('/admin/anggota', 'Admin::tambahAnggota');
 $routes->post('/admin/anggota/edit', 'Admin::editUser');
 $routes->get('/admin/buku', 'Admin::buku');
+$routes->post('/admin/buku/save', 'Admin::tambahBuku');
+$routes->post('/admin/buku/edit', 'Admin::editBuku');
 $routes->get('/admin/transaksi', 'Admin::transaksi');
 $routes->get('/admin/anggota/delete', 'Admin::deleteUser');
 //mangill isi database
