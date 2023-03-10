@@ -1,0 +1,35 @@
+{
+	"name" : "php-extended/php-api-nz-mega-interface",
+	"description" : "A library that gets data from the mega.nz website",
+	"type" : "library",
+	"keywords" : [
+		"php",
+		"api",
+		"mega.nz",
+		"interface",
+		"specification"
+	],
+	"homepage" : "https://gitlab.com/php-extended/php-api-nz-mega-interface",
+	"license" : "MIT",
+	"authors" : [
+		{
+			"name" : "Anastaszor",
+			"homepage" : "https://gitlab.com/Anastaszor",
+			"role" : "developer"
+		}
+	],
+	"support" : {
+		"issues" : "https://gitlab.com/php-extended/php-api-nz-mega-interface/issues",
+		"source" : "https://gitlab.com/php-extended/php-api-nz-mega-interface"
+	},
+	"require" : {
+		"php" : ">=7.1",
+		"php-extended/polyfill-php80-stringable" : ">=1",
+		"psr/http-client" : "^1"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"PhpExtended\\MegaNzApi\\" : "src"
+		}
+	}
+}

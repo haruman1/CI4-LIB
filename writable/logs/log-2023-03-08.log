@@ -1,0 +1,306 @@
+CRITICAL - 2023-03-08 00:45:37 --> Object of class CodeIgniter\Database\MySQLi\Builder could not be converted to string
+in APPPATH\Controllers\Auth.php on line 229.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->EmailVer()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-08 01:24:39 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Auth.php on line 227.
+ 1 APPPATH\Controllers\Auth.php(227): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Auth.php', 227)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->EmailVer()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-08 01:25:26 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Auth.php on line 227.
+ 1 APPPATH\Controllers\Auth.php(227): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Auth.php', 227)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->EmailVer()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-08 01:25:50 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::first()
+in APPPATH\Controllers\Auth.php on line 225.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->EmailVer()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-08 01:25:54 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::first()
+in APPPATH\Controllers\Auth.php on line 225.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->EmailVer()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-08 01:27:35 --> Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+in APPPATH\Controllers\Auth.php on line 228.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->EmailVer()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-08 01:27:36 --> Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+in APPPATH\Controllers\Auth.php on line 228.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->EmailVer()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-08 01:35:50 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::getRow()
+in APPPATH\Controllers\Auth.php on line 226.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->EmailVer()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-03-08 01:39:37 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@gmail.com1' at line 1 in D:\CI4\ci4\CI4-LIB-PushCI4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\CI4\ci4\CI4-LIB-PushCI4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT mail_use...', 0)
+#1 D:\CI4\ci4\CI4-LIB-PushCI4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT mail_use...')
+#2 D:\CI4\ci4\CI4-LIB-PushCI4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT mail_use...')
+#3 D:\CI4\ci4\CI4-LIB-PushCI4\app\Controllers\Auth.php(229): CodeIgniter\Database\BaseConnection->query('SELECT mail_use...')
+#4 D:\CI4\ci4\CI4-LIB-PushCI4\system\CodeIgniter.php(927): App\Controllers\Auth->EmailVer()
+#5 D:\CI4\ci4\CI4-LIB-PushCI4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#6 D:\CI4\ci4\CI4-LIB-PushCI4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\CI4\ci4\CI4-LIB-PushCI4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 D:\CI4\ci4\CI4-LIB-PushCI4\system\Commands\Server\rewrite.php(46): require_once('D:\\CI4\\ci4\\CI4-...')
+#9 {main}
+CRITICAL - 2023-03-08 01:39:37 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@gmail.com1' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT mail_user FROM daftaruser WHERE mail_user = haruman123@gmail.com1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT mail_user FROM daftaruser WHERE mail_user = haruman123@gmail.com1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT mail_user FROM daftaruser WHERE mail_user = haruman123@gmail.com1')
+ 4 APPPATH\Controllers\Auth.php(229): CodeIgniter\Database\BaseConnection->query('SELECT mail_user FROM daftaruser WHERE mail_user = haruman123@gmail.com1')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->EmailVer()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-03-08 01:39:58 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@gmail.com' at line 1 in D:\CI4\ci4\CI4-LIB-PushCI4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\CI4\ci4\CI4-LIB-PushCI4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT mail_use...', 0)
+#1 D:\CI4\ci4\CI4-LIB-PushCI4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT mail_use...')
+#2 D:\CI4\ci4\CI4-LIB-PushCI4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT mail_use...')
+#3 D:\CI4\ci4\CI4-LIB-PushCI4\app\Controllers\Auth.php(229): CodeIgniter\Database\BaseConnection->query('SELECT mail_use...')
+#4 D:\CI4\ci4\CI4-LIB-PushCI4\system\CodeIgniter.php(927): App\Controllers\Auth->EmailVer()
+#5 D:\CI4\ci4\CI4-LIB-PushCI4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#6 D:\CI4\ci4\CI4-LIB-PushCI4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\CI4\ci4\CI4-LIB-PushCI4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 D:\CI4\ci4\CI4-LIB-PushCI4\system\Commands\Server\rewrite.php(46): require_once('D:\\CI4\\ci4\\CI4-...')
+#9 {main}
+CRITICAL - 2023-03-08 01:39:58 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@gmail.com' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT mail_user FROM daftaruser WHERE mail_user = haruman12345@gmail.com', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT mail_user FROM daftaruser WHERE mail_user = haruman12345@gmail.com')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT mail_user FROM daftaruser WHERE mail_user = haruman12345@gmail.com')
+ 4 APPPATH\Controllers\Auth.php(229): CodeIgniter\Database\BaseConnection->query('SELECT mail_user FROM daftaruser WHERE mail_user = haruman12345@gmail.com')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->EmailVer()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-03-08 01:40:20 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@gmail.com551' at line 1 in D:\CI4\ci4\CI4-LIB-PushCI4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\CI4\ci4\CI4-LIB-PushCI4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT mail_use...', 0)
+#1 D:\CI4\ci4\CI4-LIB-PushCI4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT mail_use...')
+#2 D:\CI4\ci4\CI4-LIB-PushCI4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT mail_use...')
+#3 D:\CI4\ci4\CI4-LIB-PushCI4\app\Controllers\Auth.php(229): CodeIgniter\Database\BaseConnection->query('SELECT mail_use...')
+#4 D:\CI4\ci4\CI4-LIB-PushCI4\system\CodeIgniter.php(927): App\Controllers\Auth->EmailVer()
+#5 D:\CI4\ci4\CI4-LIB-PushCI4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#6 D:\CI4\ci4\CI4-LIB-PushCI4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\CI4\ci4\CI4-LIB-PushCI4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 D:\CI4\ci4\CI4-LIB-PushCI4\system\Commands\Server\rewrite.php(46): require_once('D:\\CI4\\ci4\\CI4-...')
+#9 {main}
+CRITICAL - 2023-03-08 01:40:20 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@gmail.com551' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT mail_user FROM daftaruser WHERE mail_user = haruman123@gmail.com551', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT mail_user FROM daftaruser WHERE mail_user = haruman123@gmail.com551')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT mail_user FROM daftaruser WHERE mail_user = haruman123@gmail.com551')
+ 4 APPPATH\Controllers\Auth.php(229): CodeIgniter\Database\BaseConnection->query('SELECT mail_user FROM daftaruser WHERE mail_user = haruman123@gmail.com551')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->EmailVer()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-03-08 01:40:36 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@gmail.com' at line 1 in D:\CI4\ci4\CI4-LIB-PushCI4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\CI4\ci4\CI4-LIB-PushCI4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT mail_use...', 0)
+#1 D:\CI4\ci4\CI4-LIB-PushCI4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT mail_use...')
+#2 D:\CI4\ci4\CI4-LIB-PushCI4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT mail_use...')
+#3 D:\CI4\ci4\CI4-LIB-PushCI4\app\Controllers\Auth.php(229): CodeIgniter\Database\BaseConnection->query('SELECT mail_use...')
+#4 D:\CI4\ci4\CI4-LIB-PushCI4\system\CodeIgniter.php(927): App\Controllers\Auth->EmailVer()
+#5 D:\CI4\ci4\CI4-LIB-PushCI4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#6 D:\CI4\ci4\CI4-LIB-PushCI4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\CI4\ci4\CI4-LIB-PushCI4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 D:\CI4\ci4\CI4-LIB-PushCI4\system\Commands\Server\rewrite.php(46): require_once('D:\\CI4\\ci4\\CI4-...')
+#9 {main}
+CRITICAL - 2023-03-08 01:40:36 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@gmail.com' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT mail_user FROM daftaruser WHERE mail_user = haruman123@gmail.com', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT mail_user FROM daftaruser WHERE mail_user = haruman123@gmail.com')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT mail_user FROM daftaruser WHERE mail_user = haruman123@gmail.com')
+ 4 APPPATH\Controllers\Auth.php(229): CodeIgniter\Database\BaseConnection->query('SELECT mail_user FROM daftaruser WHERE mail_user = haruman123@gmail.com')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->EmailVer()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-03-08 01:40:37 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@gmail.com' at line 1 in D:\CI4\ci4\CI4-LIB-PushCI4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\CI4\ci4\CI4-LIB-PushCI4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT mail_use...', 0)
+#1 D:\CI4\ci4\CI4-LIB-PushCI4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT mail_use...')
+#2 D:\CI4\ci4\CI4-LIB-PushCI4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT mail_use...')
+#3 D:\CI4\ci4\CI4-LIB-PushCI4\app\Controllers\Auth.php(229): CodeIgniter\Database\BaseConnection->query('SELECT mail_use...')
+#4 D:\CI4\ci4\CI4-LIB-PushCI4\system\CodeIgniter.php(927): App\Controllers\Auth->EmailVer()
+#5 D:\CI4\ci4\CI4-LIB-PushCI4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#6 D:\CI4\ci4\CI4-LIB-PushCI4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\CI4\ci4\CI4-LIB-PushCI4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 D:\CI4\ci4\CI4-LIB-PushCI4\system\Commands\Server\rewrite.php(46): require_once('D:\\CI4\\ci4\\CI4-...')
+#9 {main}
+CRITICAL - 2023-03-08 01:40:37 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '@gmail.com' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT mail_user FROM daftaruser WHERE mail_user = haruman123@gmail.com', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT mail_user FROM daftaruser WHERE mail_user = haruman123@gmail.com')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT mail_user FROM daftaruser WHERE mail_user = haruman123@gmail.com')
+ 4 APPPATH\Controllers\Auth.php(229): CodeIgniter\Database\BaseConnection->query('SELECT mail_user FROM daftaruser WHERE mail_user = haruman123@gmail.com')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->EmailVer()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-08 01:42:51 --> Undefined array key "email-kamu"
+in APPPATH\Controllers\Auth.php on line 224.
+ 1 APPPATH\Controllers\Auth.php(224): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "email-kamu"', 'APPPATH\\Controllers\\Auth.php', 224)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->EmailVer()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-08 01:43:48 --> Undefined array key "email-kamu"
+in APPPATH\Controllers\Auth.php on line 224.
+ 1 APPPATH\Controllers\Auth.php(224): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "email-kamu"', 'APPPATH\\Controllers\\Auth.php', 224)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->EmailVer()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-08 01:44:19 --> Undefined array key "email-kamu"
+in APPPATH\Controllers\Auth.php on line 225.
+ 1 APPPATH\Controllers\Auth.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "email-kamu"', 'APPPATH\\Controllers\\Auth.php', 225)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->EmailVer()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-08 01:44:20 --> Undefined array key "email-kamu"
+in APPPATH\Controllers\Auth.php on line 225.
+ 1 APPPATH\Controllers\Auth.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "email-kamu"', 'APPPATH\\Controllers\\Auth.php', 225)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->EmailVer()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-08 01:46:33 --> Undefined array key "email-kamu"
+in APPPATH\Controllers\Auth.php on line 225.
+ 1 APPPATH\Controllers\Auth.php(225): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "email-kamu"', 'APPPATH\\Controllers\\Auth.php', 225)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->EmailVer()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-03-08 01:47:17 --> mysqli_sql_exception: Table 'cor3.trendingbook' doesn't exist in D:\CI4\ci4\CI4-LIB-PushCI4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\CI4\ci4\CI4-LIB-PushCI4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM t...', 0)
+#1 D:\CI4\ci4\CI4-LIB-PushCI4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM t...')
+#2 D:\CI4\ci4\CI4-LIB-PushCI4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM t...')
+#3 D:\CI4\ci4\CI4-LIB-PushCI4\app\Views\home\index.php(42): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 D:\CI4\ci4\CI4-LIB-PushCI4\system\View\View.php(213): include('D:\\CI4\\ci4\\CI4-...')
+#5 D:\CI4\ci4\CI4-LIB-PushCI4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\CI4\ci4\CI4-LIB-PushCI4\system\Common.php(1134): CodeIgniter\View\View->render('home/index', Array, true)
+#7 D:\CI4\ci4\CI4-LIB-PushCI4\app\Controllers\Home.php(27): view('home/index', Array)
+#8 D:\CI4\ci4\CI4-LIB-PushCI4\system\CodeIgniter.php(927): App\Controllers\Home->index()
+#9 D:\CI4\ci4\CI4-LIB-PushCI4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 D:\CI4\ci4\CI4-LIB-PushCI4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\CI4\ci4\CI4-LIB-PushCI4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\CI4\ci4\CI4-LIB-PushCI4\system\Commands\Server\rewrite.php(46): require_once('D:\\CI4\\ci4\\CI4-...')
+#13 {main}
+CRITICAL - 2023-03-08 01:47:17 --> Table 'cor3.trendingbook' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM trendingbook', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM trendingbook')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM trendingbook')
+ 4 APPPATH\Views\home\index.php(42): CodeIgniter\Database\BaseConnection->query('SELECT * FROM trendingbook')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\home\\index.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('home/index', [], true)
+ 8 APPPATH\Controllers\Home.php(27): view('home/index', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->index()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-03-08 02:34:03 --> mysqli_sql_exception: Table 'cor3.trendingbook' doesn't exist in D:\CI4\ci4\CI4-LIB-PushCI4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\CI4\ci4\CI4-LIB-PushCI4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM t...', 0)
+#1 D:\CI4\ci4\CI4-LIB-PushCI4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM t...')
+#2 D:\CI4\ci4\CI4-LIB-PushCI4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM t...')
+#3 D:\CI4\ci4\CI4-LIB-PushCI4\app\Views\home\index.php(42): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 D:\CI4\ci4\CI4-LIB-PushCI4\system\View\View.php(213): include('D:\\CI4\\ci4\\CI4-...')
+#5 D:\CI4\ci4\CI4-LIB-PushCI4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\CI4\ci4\CI4-LIB-PushCI4\system\Common.php(1134): CodeIgniter\View\View->render('home/index', Array, true)
+#7 D:\CI4\ci4\CI4-LIB-PushCI4\app\Controllers\Home.php(27): view('home/index', Array)
+#8 D:\CI4\ci4\CI4-LIB-PushCI4\system\CodeIgniter.php(927): App\Controllers\Home->index()
+#9 D:\CI4\ci4\CI4-LIB-PushCI4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 D:\CI4\ci4\CI4-LIB-PushCI4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\CI4\ci4\CI4-LIB-PushCI4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\CI4\ci4\CI4-LIB-PushCI4\system\Commands\Server\rewrite.php(46): require_once('D:\\CI4\\ci4\\CI4-...')
+#13 {main}
+CRITICAL - 2023-03-08 02:34:03 --> Table 'cor3.trendingbook' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM trendingbook', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM trendingbook')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM trendingbook')
+ 4 APPPATH\Views\home\index.php(42): CodeIgniter\Database\BaseConnection->query('SELECT * FROM trendingbook')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\home\\index.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('home/index', [], true)
+ 8 APPPATH\Controllers\Home.php(27): view('home/index', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->index()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-03-08 02:44:24 --> mysqli_sql_exception: Table 'cor3.trendingbook' doesn't exist in D:\CI4\ci4\CI4-LIB-PushCI4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\CI4\ci4\CI4-LIB-PushCI4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM t...', 0)
+#1 D:\CI4\ci4\CI4-LIB-PushCI4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM t...')
+#2 D:\CI4\ci4\CI4-LIB-PushCI4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM t...')
+#3 D:\CI4\ci4\CI4-LIB-PushCI4\app\Views\home\index.php(42): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 D:\CI4\ci4\CI4-LIB-PushCI4\system\View\View.php(213): include('D:\\CI4\\ci4\\CI4-...')
+#5 D:\CI4\ci4\CI4-LIB-PushCI4\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#6 D:\CI4\ci4\CI4-LIB-PushCI4\system\Common.php(1134): CodeIgniter\View\View->render('home/index', Array, true)
+#7 D:\CI4\ci4\CI4-LIB-PushCI4\app\Controllers\Home.php(27): view('home/index', Array)
+#8 D:\CI4\ci4\CI4-LIB-PushCI4\system\CodeIgniter.php(927): App\Controllers\Home->index()
+#9 D:\CI4\ci4\CI4-LIB-PushCI4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 D:\CI4\ci4\CI4-LIB-PushCI4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\CI4\ci4\CI4-LIB-PushCI4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\CI4\ci4\CI4-LIB-PushCI4\system\Commands\Server\rewrite.php(46): require_once('D:\\CI4\\ci4\\CI4-...')
+#13 {main}
+CRITICAL - 2023-03-08 02:44:24 --> Table 'cor3.trendingbook' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM trendingbook', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM trendingbook')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM trendingbook')
+ 4 APPPATH\Views\home\index.php(42): CodeIgniter\Database\BaseConnection->query('SELECT * FROM trendingbook')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\home\\index.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('home/index', [], true)
+ 8 APPPATH\Controllers\Home.php(27): view('home/index', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->index()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
