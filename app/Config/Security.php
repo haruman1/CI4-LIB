@@ -48,7 +48,6 @@ class Security extends BaseConfig
      *
      * @var string
      */
-
     public $headerName = 'X-CSRF-TOKEN';
 
     /**

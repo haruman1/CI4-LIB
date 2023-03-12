@@ -156,7 +156,6 @@ class Auth extends BaseController
                         'validation' => $this->validation,
                         'session' => $this->session,
                         'title' => 'Register' . $_ENV['app.name'],
-
                     ], $data)
                         . view('template/auth/footer', $data);
                 } else {
