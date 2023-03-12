@@ -47,14 +47,18 @@ $routes->get('/category/search', 'CategoryController::search');
 $routes->get('/category/mybook', 'CategoryController::buku_saya');
 $routes->get('/category/read', 'CategoryController::baca_buku');
 $routes->get('category/mybook/deletedata_pinjam', 'CategoryController::deletepinjambuku');
+
+
 //tentang auth disini
 $routes->get('/login', 'Auth::login');
 $routes->post('/login', 'Auth::loginSave');
 $routes->get('/register', 'Auth::index');
-$routes->post('/register', 'Auth::save');
+$routes->post('/register', 'Auth::registerSave');
 $routes->get('/logout', 'Auth::logout');
 $routes->post('/forget', 'Auth::lupapw');
 $routes->get('/forget', 'Auth::forget');
+
+
 //route admin
 $routes->get('/admin', 'Admin::index');
 $routes->get('/admin/anggota', 'Admin::anggota');

@@ -12,7 +12,7 @@ $login_password_valid = false;
             <div class="col-md-8 col-lg-5 mx-auto" data-zanim-timeline="{}" data-zanim-trigger="scroll">
                 <div class="mb-2" data-zanim-xs='{"delay":0,"duration":1}'><a href="<?php echo base_url('/') ?>"><img src="<?php echo base_url('/') ?>/asset/img/logo/128x128/E-Lib Logo White.png" alt="logo" /></a></div>
                 <div class="card" data-zanim-xs='{"delay":0.1,"duration":1}'>
-                    <div class="card-body p-md-6">
+                    <div class="card-body p-md-5">
                         <h4 class="text-uppercase fs-1 fs-md-1">Lupa password <?php echo getenv('app.name') ?></h4>
                         <form class="text-start mt-4 needs-validation" method="POST" action="/forget" role="form">
                             <?php
@@ -28,8 +28,6 @@ $login_password_valid = false;
                             <?php
                             if ($session->getTempdata('berhasilDaftar', 10)) {
                                 echo ' <small class="text-success pl-3">' . $session->getTempdata('berhasilDaftar') . '</small>';
-                            } else if ($session->getTempdata('errorUsernameLogin', 10)) {
-                                echo ' <small class="text-danger pl-3">' . $session->getTempdata('errorUsernameLogin') . '</small>';
                             }
                             ?>
 
@@ -40,8 +38,8 @@ $login_password_valid = false;
 
                                         <?php echo csrf_field() ?>
                                         <?php
-                                        if ($session->getTempdata('errorUsername')) {
-                                            echo ' <small class="text-danger pl-3">' . $session->getTempdata('errorUsername') . '</small>';
+                                        if ($session->getTempdata('errorEmail')) {
+                                            echo ' <small class="text-danger pl-3">' . $session->getTempdata('errorEmail') . '</small>';
                                         }
                                         ?>
                                         <div class="input-group-text bg-100">
@@ -60,7 +58,9 @@ $login_password_valid = false;
                             </div>
 
 
-                            <div class="col-12 mt-2 mt-sm-3"><button class="btn btn-primary w-100" type="submit" name="submit_login">Login</button></div>
+                            <div class="col-12 mt-2 mt-sm-3">
+                                <button class="btn btn-primary w-100" type="submit" name="submit_login">Login</button>
+                            </div>
                             <div class="card-footer text-center pt-2 px-lg-2 px-1">
                                 <p class="mb-0 text-sm mx-auto">
                                     Don't have an account?
@@ -68,9 +68,9 @@ $login_password_valid = false;
                                     echo anchor('/register', 'register', 'class="text-info text-gradient font-weight-bold"');
                                     ?> </p>
                                 <p class="mb-2 text-sm mx-auto">
-                                    Lupa Password? Silahkan klik disini
+                                    Mau Login?
                                     <?php
-                                    echo anchor('/forget', 'Lupa Password', 'class="text-info text-gradient font-weight-bold"');
+                                    echo anchor('/login', 'Login', 'class="text-info text-gradient font-weight-bold"');
                                     ?> </p>
                             </div>
                     </div>

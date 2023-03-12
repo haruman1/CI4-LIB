@@ -2,6 +2,7 @@
 
 namespace Config;
 
+use App\Filters\TrimFilter;
 use CodeIgniter\Config\BaseConfig;
 use CodeIgniter\Filters\CSRF;
 use CodeIgniter\Filters\DebugToolbar;
@@ -18,6 +19,7 @@ class Filters extends BaseConfig
      * @var array
      */
     public $aliases = [
+        'trim'          => TrimFilter::class,
         'csrf'          => CSRF::class,
         'toolbar'       => DebugToolbar::class,
         'honeypot'      => Honeypot::class,
@@ -58,7 +60,9 @@ class Filters extends BaseConfig
      *
      * @var array
      */
-    public $methods = [];
+    public $methods = [
+        'post' => ['trim'],
+    ];
 
     /**
      * List of filter aliases that should run on any

@@ -34,6 +34,7 @@ class Auth extends BaseController
     {
         // 'nama_kamu' => session login user
         // 'role_kamu' => session login user
+
         if ($this->session->get('nama_kamu') == NULL || $this->session->get('role_kamu') == NULL) {
 
 
@@ -61,10 +62,10 @@ class Auth extends BaseController
         $randomNumber = rand(100000, 999999);
         return $randomNumber;
     }
-    public function save()
+    public function registerSave()
     {
         //role_kamu buat sesi jika dia login
-
+        // $this->session->has('role_kamu') || $this->session->has('nama_kamu')
         if ($this->session->get('role_kamu') == NULL || $this->session->get('nama_kamu') == NULL) {
             helper('form');
 
@@ -172,14 +173,20 @@ class Auth extends BaseController
                     ];
                     $this->testEmail($data['mail_user']);
                     $this->AuthModel->save($data);
-                    $this->session->setTempdata('berhasilDaftar', 'Selamat,akun anda sudah terdaftar, silahkan login ', 10);
+
+                    $this->session->setTempdata('notificationDetail',  'Akun anda sudah terdaftar,silahkan login akun anda', 1);
+                    $this->session->setTempdata('titleSwal',  'Selamat!!!', 1);
+                    $this->session->setTempdata('iconSwal',  'info', 1);
+
+                    $this->session->setTempdata('berhasilDaftar', 'Selamat,akun anda sudah terdaftar, silahkan Check Email ', 1);
                     return redirect()->to('/login');
                     // $this->session->set('errorNama',);
+                    //salt random asal
 
                 }
             }
         } else if (strtolower($this->request->getMethod()) !== 'post') {
-            return $this->response->setStatusCode(405)->setBody('Method Not Allowed');
+            return $this->response->setStatusCode(405);
         } else {
             return redirect()->to('/');
         }
@@ -233,7 +240,7 @@ class Auth extends BaseController
             if ($this->session->get('role_kamu') == NULL || $this->session->get('nama_kamu') == NULL) {
 
                 if (isset($row->mail_user)) {
-                    if ($row->user_aktif < 0) {
+                    if ($row->user_aktif == 0) {
                         $this->builder->where('mail_user', $email_kamu);
                         $this->builder->set('user_aktif', true);
                         $this->builder->update();
@@ -241,10 +248,10 @@ class Auth extends BaseController
                         $this->session->setTempdata('titleSwal',  'Selamat!!!', 1);
                         $this->session->setTempdata('iconSwal',  'success', 1);
                         return redirect()->to('/login');
-                    } else if ($row->user_aktif > 0) {
+                    } else if ($row->user_aktif == 1) {
                         $this->session->setTempdata('notificationDetail',  'Akun anda sudah terdaftar,silahkan login akun anda', 1);
                         $this->session->setTempdata('titleSwal',  'Selamat!!!', 1);
-                        $this->session->setTempdata('iconSwal',  'success', 1);
+                        $this->session->setTempdata('iconSwal',  'info', 1);
                         return redirect()->to('/login');
                     } else {
                         $this->session->setTempdata('notificationDetail',  'Maaf, anda sudah daftar terlalu lama, silahkan daftar lagi yah', 1);
@@ -330,7 +337,7 @@ class Auth extends BaseController
 
                 $password = $this->request->getVar('login_password');
                 $cek = $this->AuthModel->where('username_user', $username)->first();
-                if ($cek) {
+                if ($cek > 0) {
 
                     if (password_verify($password, $cek['password_user'])) {
                         if ($cek['user_aktif'] != 0) {
@@ -339,11 +346,16 @@ class Auth extends BaseController
                                 'nama_kamu' => $cek['nama_lengkap_user'],
                                 'role_kamu' => $cek['role_user'],
                             ];
+                            $this->session->set($data);
                             $this->builder->set('user_login', '1');
                             $this->builder->where('username_user', $username);
                             $this->builder->update();
+                            echo  $_SESSION['nama_kamu'],
+                            $_SESSION['username_kamu'],
+
+                            $_SESSION['role_kamu'];
                             // gives UPDATE `mytable` SET `field` = 'field+1' WHERE `id` = 2
-                            return redirect()->to('/admiin');
+                            // return redirect()->to('/admiin');
                         } else {
                             $this->session->setTempdata('errorUsername', "Maaf kamu belum aktivasi akun kamu lewat email, silahkan check email " . $cek['mail_user'] . " untuk proses aktivasi", 1);
                             unset(
@@ -388,22 +400,106 @@ class Auth extends BaseController
     }
     public function lupapw()
     {
+        if ($this->request->getMethod() === 'post') {
+
+
+
+
+            if (!$this->validate(
+                [
+                    'lupa_email' => [
+                        'rules' => 'required|min_length[3]',
+                        'errors' => [
+                            'required' => 'Email wajib di isi',
+                            'min_length[3]' => 'Email terlalu pendek',
+                        ],
+                    ],
+
+                ]
+            )) {
+                $this->session->setTempdata('errorEmail', $this->validation->getError('lupa_email'), 1);
+                return redirect()->to('/login');
+            } else {
+                $data = [
+                    'mail_user' => htmlspecialchars(strip_tags($this->request->getVar('lupa_email'))),
+                ];
+                $passwword_aku = $this->randomNumber();
+                $password_ubah = password_hash($passwword_aku, PASSWORD_DEFAULT);
+                $this->builder->set('password_user', $password_ubah);
+                $this->builder->where('mail_user', $data['mail_user']);
+
+                $this->builder->update();
+
+
+
+
+                $cek = $this->AuthModel->where('mail_user', $data['mail_user'])->first();
+                if ($cek > 0) {
+                    $this->lupapw_email($cek['username_user'], $cek['mail_user'], $passwword_aku);
+
+                    $this->session->setTempdata('notificationDetail',  'Password anda sudah berubah,silahkan check email anda untuk mendapatkan password terbaru', 1);
+                    $this->session->setTempdata('titleSwal',  'Password sudah berubah', 1);
+                    $this->session->setTempdata('iconSwal',  'info', 1);
+                }
+            }
+        }
+    }
+    public function lupapw_email($username_baru, $email_kamu, $password_baru)
+    {
+
+        //Import PHPMailer classes into the global namespace
+        //These must be at the top of your script, not inside a function
+        $mail = new PHPMailer(true);
+        try {
+            $mail->IsSMTP();
+            $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+            $mail->SMTPAuth = true;                                   //Enable SMTP authentication
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable implicit TLS encryption
+            $mail->Port = $_ENV['email.port'];                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+            $mail->Host = $_ENV['email.host'];
+
+            //username dan password
+            $mail->Username = $_ENV['email.username'];
+            $mail->Password = $_ENV['email.password'];
+
+
+            //recipients
+            $mail->addAddress($email_kamu);     //Add a recipient
+            $mail->addReplyTo('admin@lover.com', 'Admin');
+            $mail->setFrom('noreply-elib@gmail.com', "noreply-elib@gmail.com");
+            //Content
+            $mail->isHTML(true);                                  //Set email format to HTML
+            $mail->Subject = "Lupa Password Email";
+            $mail->Body    = 'Selamat Password anda sudah berubah dalam website  ' . $_ENV['app.name'] . '\n Silahkan gunakan Username ' . $username_baru . ' Dan password ' . $password_baru . ' Untuk Login kedalam website';
+            // $mail->Body    = 'Klik link ini untuk verifikasi email anda <a href="http://localhost:8080/verifikasiEmail?email-kamu=Haruman@gmail.com' . $email_user . '">Verifikasi Email</a>';
+            $mail->AltBody = '  ';
+
+            $mail->send();
+        } catch (Exception $e) {
+        }
     }
     public function logout()
     {
-        $this->builder->set('user_login', 0);
-        $this->builder->where('username_user', $this->session->get('username_kamu'));
-        $this->builder->update();
-        $this->session->destroy();
+        if ($this->session->has('nama_kamu') || $this->session->has('username_kamu') || $this->session->has('role_kamu')) {
+            $this->builder->set('user_login', 0);
+            $this->builder->where('username_user', $this->session->get('username_kamu'));
+            $this->builder->update();
+            $this->session->destroy();
+
+            $this->session->remove('nama_kamu');
+            $this->session->remove('username_kamu');
+            $this->session->remove('role_kamu');
 
 
+            // or multiple values:
 
-        // or multiple values:
-        unset(
-            $_SESSION['nama_kamu'],
-            $_SESSION['role_kamu']
-        );
-        $this->session->setTempdata('berhasilDaftar', 'Anda sudah logout, Silahkan Login Kembali', 10);
-        return redirect()->to('/login');
+            $this->session->setTempdata('notificationDetail',  'Anda sudah logout, Silahkan Login Kembali', 1);
+            $this->session->setTempdata('titleSwal',  'Selamat', 1);
+            $this->session->setTempdata('iconSwal',  'info', 1);
+            return redirect()->to('/login');
+        } else {
+            $this->session->setTempdata('berhasilDaftar', 'Maaf anda belum login', 1);
+            return redirect()->to('/login');
+        }
     }
 }

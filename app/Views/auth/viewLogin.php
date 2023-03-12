@@ -16,7 +16,7 @@ $login_password_valid = false;
                         <h4 class="text-uppercase fs-0 fs-md-1">login with <?php echo getenv('app.name') ?></h4>
                         <form class="text-start mt-4 needs-validation" method="POST" action="/login" role="form">
                             <?php
-                            if ($session->getTempdata('notificationDetail', 1)) {
+                            if ($session->getTempdata('notificationDetail', 10)) {
                                 echo "<script>
                                 Swal.fire({
                                     title: '" . $session->getTempdata('titleSwal', 1) . "',
@@ -35,15 +35,15 @@ $login_password_valid = false;
 
                             <div class="row align-items-center">
                                 <div class="col-12">
-
+                                    <?php
+                                    if ($session->getTempdata('errorUsername')) {
+                                        echo ' <small class="text-danger pl-3">' . $session->getTempdata('errorUsername') . '</small>';
+                                    }
+                                    ?>
                                     <div class="input-group">
 
                                         <?php echo csrf_field() ?>
-                                        <?php
-                                        if ($session->getTempdata('errorUsername')) {
-                                            echo ' <small class="text-danger pl-3">' . $session->getTempdata('errorUsername') . '</small>';
-                                        }
-                                        ?>
+
                                         <div class="input-group-text bg-100">
 
                                             <span class="far fa-user"></span>
@@ -54,14 +54,13 @@ $login_password_valid = false;
                                                                                                                                                                                                 } ?>" />
 
                                     </div>
-
                                 </div>
-                                <?php
-                                if ($session->getTempdata('errorPassword')) {
-                                    echo ' <small class="text-danger pl-3">' . $session->getTempdata('errorPassword') . '</small>';
-                                }
-                                ?>
-                                <div class="col-12 mt-2 mt-sm-4">
+                                <div class="col-12 mt-2 mt-sm-1">
+                                    <?php
+                                    if ($session->getTempdata('errorPassword')) {
+                                        echo ' <small class="text-danger pl-3">' . $session->getTempdata('errorPassword') . '</small>';
+                                    }
+                                    ?>
                                     <div class="input-group">
                                         <div class="input-group-text bg-100">
 

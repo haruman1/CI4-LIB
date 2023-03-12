@@ -11,13 +11,13 @@
                     <div class="card-body p-md-5">
 
                         <h4 class="text-uppercase fs-0 fs-md-1">create your <?php echo getenv('app.name') ?> account</h4>
-                        <form class="text-start mt-4 needs-validation" method="POST" action="/register">
+                        <form class="text-start mt-4 " method="POST" action="/register">
 
 
                             <?php echo csrf_field() ?>
                             <div class=" row align-items-center g-4">
 
-                                <div class="col-12">
+                                <div class="col-12 mt-2 mt-sm-1">
                                     <?php
                                     if ($session->getTempdata('errorNama', 60)) {
                                         echo ' <small class="text-danger pl-3">' . $session->getTempdata('errorNama') . '</small>';
@@ -26,7 +26,7 @@
                                     <input class="form-control" type="text" placeholder="Masukkan Nama Full Anda" aria-label="Fullname" name="register_nama" id="register_nama" value="<?= set_value('register_nama') ?>" />
                                 </div>
 
-                                <div class="col-12">
+                                <div class="col-12 mt-2 mt-sm-1">
                                     <?php
                                     if ($session->getTempdata('errorEmail')) {
                                         echo ' <small class="text-danger pl-3">' . $session->getTempdata('errorEmail') . '</small>';
@@ -36,7 +36,7 @@
 
                                 </div>
 
-                                <div class="col-12">
+                                <div class="col-12 mt-2 mt-sm-1">
                                     <?php
                                     if ($session->getTempdata('errorUsername')) {
                                         echo ' <small class="text-danger pl-3">' . $session->getTempdata('errorUsername') . '</small>';
@@ -45,7 +45,7 @@
                                     <input class="form-control" type="username" placeholder="Masukkan Username Anda" aria-label="Username" name="register_username" id="register_username" value="<?= set_value('register_username') ?>" />
                                 </div>
 
-                                <div class="col-12">
+                                <div class="col-12 mt-2 mt-sm-1">
                                     <?php
                                     if ($session->getTempdata('errorPassword')) {
                                         echo ' <small class="text-danger pl-3">' . $session->getTempdata('errorPassword') . '</small>';
@@ -53,7 +53,7 @@
                                     ?><input class="form-control" type="Password" placeholder="Password" aria-label="Password" id="register_password" name="register_password" />
 
                                 </div>
-                                <div class="col-12">
+                                <div class="col-12 mt-2 mt-sm-1">
                                     <?php
                                     if ($session->getTempdata('errorPasswordConf')) {
                                         echo ' <small class="text-danger pl-3">' . $session->getTempdata('errorPasswordConf') . '</small>';
@@ -62,7 +62,7 @@
 
                                 </div>
                             </div>
-                            <div class="row align-items-center mt-3">
+                            <div class="row align-items-center mt-1">
                                 <div class="col-12 mt-2 mt-sm-3"><button class="btn btn-primary w-100" type="submit">Create Account</button></div>
                                 <div class="col-12 mt-2 mt-sm-3">
                                     <p class="mb-0 text-sm mx-auto">
