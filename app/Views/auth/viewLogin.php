@@ -22,6 +22,7 @@ $login_password_valid = false;
                                     title: '" . $session->getTempdata('titleSwal', 1) . "',
                                     text:'" . $session->getTempdata('notificationDetail', 1) . "',
                                     icon:  '" . $session->getTempdata('iconSwal', 1) . "'   ,
+                                    html: '" . $session->getTempdata('htmlSwal', 1) . "',
                                   })</script>";
                             }
                             ?>

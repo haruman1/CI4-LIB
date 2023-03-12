@@ -149,7 +149,7 @@ class Auth extends BaseController
                     );
 
 
-                    $this->session->setTempdata('errorPasswordConf', $this->validation->getError('register_confirmation_password'), 10);
+                    $this->session->setTempdata('errorPasswordConf', $this->validation->getError('register_confirmation_password'), 1);
 
 
                     return view('template/auth/header') . view('auth/viewRegister', [
@@ -296,8 +296,8 @@ class Auth extends BaseController
                     'login_username' => [
                         'rules' => 'required|min_length[3]',
                         'errors' => [
-                            'required' => 'Email wajib di isi',
-                            'min_length[3]' => 'Email terlalu pendek',
+                            'required' => 'Username wajib di isi',
+                            'min_length[3]' => 'Username terlalu pendek',
 
                         ],
                     ],
@@ -332,40 +332,47 @@ class Auth extends BaseController
                 ], $data)
                     . view('template/auth/footer');
             } else {
+                // Atur waktu sesi menjadi 1 jam (3600 detik)
+
                 $username = $this->request->getVar('login_username');
 
                 $password = $this->request->getVar('login_password');
                 $cek = $this->AuthModel->where('username_user', $username)->first();
                 if ($cek > 0) {
+                    if ($cek['user_login'] == 0) {
+                        if (password_verify($password, $cek['password_user'])) {
+                            if ($cek['user_aktif'] != 0) {
+                                $data = [
+                                    'username_kamu' => $cek['username_user'],
+                                    'nama_kamu' => $cek['nama_lengkap_user'],
+                                    'role_kamu' => $cek['role_user'],
 
-                    if (password_verify($password, $cek['password_user'])) {
-                        if ($cek['user_aktif'] != 0) {
-                            $data = [
-                                'username_kamu' => $cek['username_user'],
-                                'nama_kamu' => $cek['nama_lengkap_user'],
-                                'role_kamu' => $cek['role_user'],
-                            ];
-                            $this->session->set($data);
-                            $this->builder->set('user_login', '1');
-                            $this->builder->where('username_user', $username);
-                            $this->builder->update();
-                            echo  $_SESSION['nama_kamu'],
-                            $_SESSION['username_kamu'],
+                                ];
+                                $this->session->set($data);
+                                $this->builder->set('user_login', '1');
+                                $this->builder->where('username_user', $username);
+                                $this->builder->update();
 
-                            $_SESSION['role_kamu'];
-                            // gives UPDATE `mytable` SET `field` = 'field+1' WHERE `id` = 2
-                            // return redirect()->to('/admiin');
+                                // gives UPDATE `mytable` SET `field` = 'field+1' WHERE `id` = 2
+                                // return redirect()->to('/admiin');
+                            } else {
+
+
+                                $this->session->setTempdata('notificationDetail',  "aaaa", 1);
+                                $this->session->setTempdata('htmlSwal',  "Maaf kamu belum aktivasi akun kamu lewat email, silahkan check email <strong>" . $cek['mail_user'] . "</strong> untuk proses aktivasi", 1);
+                                $this->session->setTempdata('titleSwal',  'Maaf yah', 1);
+                                $this->session->setTempdata('iconSwal',  'info', 1);
+
+                                return redirect()->to('/login');
+                            }
                         } else {
-                            $this->session->setTempdata('errorUsername', "Maaf kamu belum aktivasi akun kamu lewat email, silahkan check email " . $cek['mail_user'] . " untuk proses aktivasi", 1);
-                            unset(
-                                $_SESSION['nama_kamu'],
-                                $_SESSION['role_kamu']
-                            );
+                            $this->session->setTempdata('errorPassword', 'Password salah', 1);
                             return redirect()->to('/login');
                         }
                     } else {
-                        $this->session->setTempdata('errorPassword', 'Password salah', 1);
-
+                        $this->session->setTempdata('notificationDetail',  'Maaf, akun anda sedang digunakan oleh perangkat lain, silahkan coba lagi nanti selama 5  menit kemudian', 1);
+                        $this->session->setTempdata('titleSwal',  'Maaf yah', 1);
+                        $this->session->setTempdata('iconSwal',  'error', 1);
                         return redirect()->to('/login');
                     }
                 } else {
@@ -497,7 +504,10 @@ class Auth extends BaseController
             $this->session->setTempdata('iconSwal',  'info', 1);
             return redirect()->to('/login');
         } else {
-            $this->session->setTempdata('berhasilDaftar', 'Maaf anda belum login', 1);
+
+            $this->session->setTempdata('notificationDetail',  'Maaf anda belum login', 1);
+            $this->session->setTempdata('titleSwal',  'Maaf yah', 1);
+            $this->session->setTempdata('iconSwal',  'info', 1);
             return redirect()->to('/login');
         }
     }
